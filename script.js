@@ -111,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     smoothWheel: true,
     orientation: 'vertical'
   });
+  window.lenis = lenis;
 
   // FIX: Single RAF loop for Lenis — removed duplicate gsap.ticker.add(lenis.raf)
   // which caused double-ticking and scroll jank

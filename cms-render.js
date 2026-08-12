@@ -208,9 +208,9 @@
 
   // Bind Public Website Form Submissions
   function bindPublicForms() {
-    // 1. Join Application Form
+    // 1. Join Application Form (Handled by join.html dedicated script when present)
     const appForm = document.getElementById('balJyotiApplicationForm');
-    if (appForm) {
+    if (appForm && !window.joinFormHandlerInitialized) {
       appForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const formData = new FormData(appForm);

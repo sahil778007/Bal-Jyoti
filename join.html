@@ -667,6 +667,8 @@
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.4s ease, visibility 0.4s ease;
+      overflow-y: auto;
+      overscroll-behavior: contain;
     }
     .app-modal-overlay.active {
       opacity: 1;
@@ -677,14 +679,31 @@
       background: var(--bg-ivory);
       width: 100%;
       max-width: 900px;
-      max-height: 90vh;
+      max-height: 85vh;
       border-radius: 28px;
       border: 1px solid rgba(198, 161, 91, 0.4);
       box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
       overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
       position: relative;
       transform: scale(0.92) translateY(20px);
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      margin: auto;
+    }
+    .app-modal-container::-webkit-scrollbar {
+      width: 8px;
+    }
+    .app-modal-container::-webkit-scrollbar-track {
+      background: rgba(18, 53, 36, 0.05);
+      border-radius: 8px;
+    }
+    .app-modal-container::-webkit-scrollbar-thumb {
+      background: var(--accent-gold);
+      border-radius: 8px;
+    }
+    .app-modal-container::-webkit-scrollbar-thumb:hover {
+      background: var(--primary-forest);
     }
     .app-modal-overlay.active .app-modal-container {
       transform: scale(1) translateY(0);
@@ -1433,7 +1452,7 @@
 
   <!-- ==================== APPLICATION FORM MODAL ==================== -->
   <div class="app-modal-overlay" id="appModalOverlay">
-    <div class="app-modal-container">
+    <div class="app-modal-container" id="appModalContainer" data-lenis-prevent>
       <button class="modal-close-btn" id="closeAppModalBtn" aria-label="Close modal">
         <i class="fa-solid fa-xmark"></i>
       </button>
@@ -1811,6 +1830,8 @@
 
   <!-- ==================== PAGE LOGIC ==================== -->
   <script>
+    window.joinFormHandlerInitialized = true;
+
     document.addEventListener('DOMContentLoaded', () => {
       // 1. FAQ Accordion Logic
       const faqItems = document.querySelectorAll('.faq-item');
@@ -1822,6 +1843,22 @@
           if (!isActive) item.classList.add('active');
         });
       });
+
+      // Helper function to stop background smooth scroll and lock body
+      const openModalWithLock = (modalEl) => {
+        if (!modalEl) return;
+        modalEl.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        if (window.lenis) window.lenis.stop();
+      };
+
+      // Helper function to resume smooth scroll and unlock body
+      const closeModalWithUnlock = (modalEl) => {
+        if (!modalEl) return;
+        modalEl.classList.remove('active');
+        document.body.style.overflow = '';
+        if (window.lenis) window.lenis.start();
+      };
 
       // 2. Application Modal Open / Close Logic
       const modalOverlay = document.getElementById('appModalOverlay');
@@ -1850,26 +1887,23 @@
           const deptSelect = appForm.querySelector('#department');
           if (deptSelect && dept) deptSelect.value = dept;
 
-          // Set default date to today
+          // Set default date to today if empty
           const availDate = appForm.querySelector('#availableFrom');
           if (availDate && !availDate.value) {
             availDate.value = new Date().toISOString().split('T')[0];
           }
 
-          modalOverlay.classList.add('active');
-          document.body.style.overflow = 'hidden';
+          openModalWithLock(modalOverlay);
         });
       });
 
       closeBtn.addEventListener('click', () => {
-        modalOverlay.classList.remove('active');
-        document.body.style.overflow = '';
+        closeModalWithUnlock(modalOverlay);
       });
 
       modalOverlay.addEventListener('click', (e) => {
         if (e.target === modalOverlay) {
-          modalOverlay.classList.remove('active');
-          document.body.style.overflow = '';
+          closeModalWithUnlock(modalOverlay);
         }
       });
 
@@ -1907,29 +1941,35 @@
         submitAppBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Submitting...`;
 
         const formData = new FormData(appForm);
+        const resumeFileInput = document.getElementById('resumeFile');
+        const portfolioFileInput = document.getElementById('portfolioFile');
+        const photoFileInput = document.getElementById('photoFile');
+
         const appObj = {
           id: 'APP-' + Date.now(),
-          fullName: formData.get('fullName'),
-          email: formData.get('email'),
-          phone: formData.get('phone'),
+          fullName: (formData.get('fullName') || '').toString().trim(),
+          email: (formData.get('email') || '').toString().trim(),
+          phone: (formData.get('phone') || '').toString().trim(),
           dob: formData.get('dob'),
-          gender: formData.get('gender'),
-          city: formData.get('city'),
-          state: formData.get('state'),
-          country: formData.get('country'),
+          gender: formData.get('gender') || 'Prefer not to say',
+          city: (formData.get('city') || '').toString().trim(),
+          state: (formData.get('state') || '').toString().trim(),
+          country: (formData.get('country') || '').toString().trim() || 'India',
           qualification: formData.get('qualification'),
-          currentCollegeCompany: formData.get('currentCollegeCompany') || '',
-          courseDegree: formData.get('courseDegree') || '',
-          skills: formData.get('skills'),
+          currentCollegeCompany: (formData.get('currentCollegeCompany') || '').toString().trim(),
+          courseDegree: (formData.get('courseDegree') || '').toString().trim(),
+          skills: (formData.get('skills') || '').toString().trim(),
           experience: formData.get('experience') || 'Fresh / No Experience',
-          preferredRole: formData.get('preferredRole'),
-          department: formData.get('department'),
-          duration: formData.get('duration'),
+          preferredRole: formData.get('preferredRole') || 'Intern',
+          department: formData.get('department') || 'Education',
+          duration: formData.get('duration') || '3 Months',
           availableFrom: formData.get('availableFrom'),
-          whyJoin: formData.get('whyJoin'),
-          contribution: formData.get('contribution'),
-          declaration: formData.get('declaration') ? true : false,
-          resumeFileName: document.getElementById('resumeFile').files[0]?.name || 'resume.pdf',
+          whyJoin: (formData.get('whyJoin') || '').toString().trim(),
+          contribution: (formData.get('contribution') || '').toString().trim(),
+          declaration: true,
+          resumeFileName: resumeFileInput?.files[0]?.name || 'resume.pdf',
+          portfolioFileName: portfolioFileInput?.files[0]?.name || '',
+          photoFileName: photoFileInput?.files[0]?.name || '',
           status: 'Pending',
           createdAt: new Date().toISOString()
         };
@@ -1959,16 +1999,25 @@
           submitAppBtn.disabled = false;
           submitAppBtn.innerHTML = `<span>Submit Application</span> <i class="fa-solid fa-paper-plane"></i>`;
           appForm.reset();
-          document.getElementById('resumeFileNameDisplay').textContent = '';
+          
+          const resumeDisp = document.getElementById('resumeFileNameDisplay');
+          const portDisp = document.getElementById('portfolioFileNameDisplay');
+          const photoDisp = document.getElementById('photoFileNameDisplay');
+          if (resumeDisp) resumeDisp.textContent = '';
+          if (portDisp) portDisp.textContent = '';
+          if (photoDisp) photoDisp.textContent = '';
+
           modalOverlay.classList.remove('active');
-          successOverlay.classList.add('active');
-        }, 600);
+          openModalWithLock(successOverlay);
+        }, 500);
       });
 
       closeSuccessViewOppBtn.addEventListener('click', () => {
-        successOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-        document.getElementById('open-opportunities').scrollIntoView({ behavior: 'smooth' });
+        closeModalWithUnlock(successOverlay);
+        const oppSection = document.getElementById('open-opportunities');
+        if (oppSection) {
+          oppSection.scrollIntoView({ behavior: 'smooth' });
+        }
       });
     });
   </script>
