@@ -1,0 +1,1937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate | Bal Jyoti Foundation — Direct Bank Transfer</title>
+  <meta name="description" content="Support Bal Jyoti Foundation through a verified direct bank transfer. Empower rural artisans, women, and children across Bihar.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Shared Site Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* =====================================================================
+       BAL JYOTI FOUNDATION — LUXURY DONATION PAGE (DIRECT BANK TRANSFER)
+       Palette: Forest Green (#173D2A), Deep Green (#0E2A1D), Warm Beige (#F4EFE5),
+                Soft Ivory (#FCFAF5), Muted Gold (#B99555), Charcoal (#222222)
+    ===================================================================== */
+
+    :root {
+      --color-forest: #173D2A;
+      --color-deep-green: #0E2A1D;
+      --color-warm-beige: #F4EFE5;
+      --color-ivory: #FCFAF5;
+      --color-gold: #B99555;
+      --color-gold-light: #d6b77b;
+      --color-charcoal: #222222;
+      --color-muted: #555555;
+      --color-border: rgba(185, 149, 85, 0.25);
+      --shadow-soft: 0 16px 36px rgba(14, 42, 29, 0.06);
+      --shadow-hover: 0 22px 48px rgba(14, 42, 29, 0.12);
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-ivory);
+      color: var(--color-charcoal);
+      overflow-x: hidden;
+      cursor: default !important;
+    }
+
+    a, button, input[type="submit"], input[type="button"], select, [role="button"] {
+      cursor: pointer !important;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
+      cursor: text !important;
+    }
+
+    .custom-cursor-dot, .custom-cursor-circle {
+      display: none !important;
+    }
+
+    /* ── ANIMATION UTILITIES ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* PRELOADER HIDE FIX */
+    #preloader {
+      display: none !important;
+    }
+
+    /* ── 1. HERO SECTION (AWWWARDS NGO DESIGN) ── */
+    .don-hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url('images/hero_artisan_women.jpg') center/cover no-repeat fixed;
+      padding: 160px 24px 100px;
+      color: #ffffff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .don-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 30%, rgba(23, 61, 42, 0.75) 0%, rgba(14, 42, 29, 0.92) 80%),
+                  linear-gradient(180deg, rgba(14, 42, 29, 0.88) 0%, rgba(14, 42, 29, 0.98) 100%);
+    }
+
+    .don-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .don-hero-emblem {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(185, 149, 85, 0.4);
+      border-radius: 40px;
+      padding: 8px 22px 8px 14px;
+      margin-bottom: 22px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .don-hero-logo-icon {
+      height: 38px;
+      width: auto;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+    }
+
+    .don-emblem-text {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #ffffff;
+    }
+
+    .don-hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      background: rgba(14, 42, 29, 0.75);
+      border: 1px solid var(--color-border);
+      border-radius: 40px;
+      padding: 8px 24px;
+      margin-bottom: 24px;
+      backdrop-filter: blur(10px);
+    }
+
+    .don-hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5.2vw, 4.2rem);
+      font-weight: 600;
+      line-height: 1.14;
+      margin-bottom: 22px;
+      letter-spacing: -0.01em;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .don-gold-title {
+      background: linear-gradient(135deg, #B99555 0%, #f3d498 50%, #B99555 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-style: italic;
+    }
+
+    .don-hero-sub {
+      font-size: clamp(1.05rem, 1.8vw, 1.22rem);
+      color: rgba(255, 255, 255, 0.92);
+      line-height: 1.68;
+      max-width: 800px;
+      margin: 0 auto 38px;
+      font-weight: 300;
+    }
+
+    .don-hero-btn-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+
+    .btn-hero-cta {
+      background: var(--color-gold);
+      color: var(--color-deep-green);
+      font-weight: 700;
+      padding: 17px 40px;
+      border-radius: 40px;
+      text-transform: uppercase;
+      font-size: 0.84rem;
+      letter-spacing: 0.12em;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 12px 30px rgba(185, 149, 85, 0.4);
+      border: none;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-hero-cta:hover {
+      background: var(--color-gold-light);
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(185, 149, 85, 0.55);
+    }
+
+    .btn-hero-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      font-weight: 600;
+      padding: 17px 36px;
+      border-radius: 40px;
+      font-size: 0.84rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      backdrop-filter: blur(10px);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-hero-secondary:hover {
+      background: rgba(255, 255, 255, 0.18);
+      border-color: #ffffff;
+      transform: translateY(-3px);
+    }
+
+    .don-hero-stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .don-hero-stat-card {
+      background: rgba(14, 42, 29, 0.65);
+      border: 1px solid rgba(185, 149, 85, 0.3);
+      border-radius: 18px;
+      padding: 18px 14px;
+      backdrop-filter: blur(12px);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .don-hero-stat-card:hover {
+      background: rgba(23, 61, 42, 0.85);
+      border-color: var(--color-gold);
+      transform: translateY(-4px);
+    }
+
+    .don-stat-num {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .don-stat-lbl {
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* ── 2. WHY WE DONATE ── */
+    .don-why-section {
+      padding: 96px 24px;
+      background: #ffffff;
+    }
+
+    .don-container {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .don-why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .don-why-left {
+      padding-right: 20px;
+    }
+
+    .don-eyebrow {
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .don-title-serif {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.2vw, 2.8rem);
+      color: var(--color-forest);
+      line-height: 1.22;
+      margin-bottom: 16px;
+    }
+
+    .don-why-desc {
+      font-size: 0.98rem;
+      color: var(--color-muted);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .don-impact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .don-impact-card {
+      background: var(--color-warm-beige);
+      border: 1px solid var(--color-border);
+      border-radius: 18px;
+      padding: 22px;
+      transition: all 0.3s ease;
+    }
+
+    .don-impact-card:hover {
+      background: #ffffff;
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-soft);
+      border-color: var(--color-gold);
+    }
+
+    .don-impact-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(185, 149, 85, 0.16);
+      color: var(--color-forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      margin-bottom: 12px;
+    }
+
+    .don-impact-card-title {
+      font-family: var(--font-serif);
+      font-size: 1.08rem;
+      color: var(--color-forest);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .don-impact-card-text {
+      font-size: 0.84rem;
+      color: var(--color-muted);
+      line-height: 1.5;
+    }
+
+    /* ── 3. DONATION FORM & 4. DONOR INFO & 5. BANK TRANSFER ── */
+    .don-main-section {
+      padding: 90px 24px;
+      background: var(--color-ivory);
+    }
+
+    .don-main-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    /* PROGRESS INDICATOR */
+    .don-progress-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--color-warm-beige);
+      border-radius: 16px;
+      padding: 14px 20px;
+      margin-bottom: 30px;
+      border: 1px solid var(--color-border);
+    }
+
+    .don-progress-step {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--color-muted);
+    }
+
+    .don-progress-step.active {
+      color: var(--color-forest);
+    }
+
+    .don-step-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: rgba(185, 149, 85, 0.2);
+      color: var(--color-forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.78rem;
+    }
+
+    .don-progress-step.active .don-step-num {
+      background: var(--color-forest);
+      color: var(--color-gold);
+    }
+
+    .don-progress-divider {
+      flex: 1;
+      height: 1px;
+      background: var(--color-border);
+      margin: 0 12px;
+    }
+
+    /* FORM CARD */
+    .don-form-card {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .don-section-group-title {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--color-forest);
+      margin-bottom: 4px;
+    }
+
+    .don-section-group-sub {
+      font-size: 0.88rem;
+      color: var(--color-muted);
+      margin-bottom: 22px;
+    }
+
+    .don-amount-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .don-pill {
+      flex: 1;
+      min-width: 85px;
+      padding: 12px 10px;
+      border: 1px solid rgba(23, 61, 42, 0.15);
+      border-radius: 12px;
+      background: var(--color-ivory);
+      color: var(--color-forest);
+      font-weight: 700;
+      font-size: 1rem;
+      text-align: center;
+      transition: all 0.25s ease;
+    }
+
+    .don-pill:hover, .don-pill.active {
+      background: var(--color-forest);
+      color: var(--color-gold);
+      border-color: var(--color-forest);
+      transform: translateY(-2px);
+    }
+
+    .don-field {
+      margin-bottom: 20px;
+    }
+
+    .don-field label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-forest);
+      margin-bottom: 8px;
+    }
+
+    .don-input-control {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1px solid rgba(23, 61, 42, 0.16);
+      border-radius: 12px;
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      background: var(--color-ivory);
+      color: var(--color-charcoal);
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .don-input-control:focus {
+      outline: none;
+      border-color: var(--color-gold);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(185, 149, 85, 0.2);
+    }
+
+    .don-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .don-group-block {
+      background: var(--color-warm-beige);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 22px;
+      border: 1px solid rgba(185, 149, 85, 0.2);
+    }
+
+    .don-group-block-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 14px;
+    }
+
+    .don-confirm-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 20px 0 24px;
+      font-size: 0.85rem;
+      color: var(--color-muted);
+      line-height: 1.5;
+    }
+
+    .don-confirm-check input {
+      margin-top: 3px;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--color-forest);
+    }
+
+    .btn-submit-intent-gold {
+      width: 100%;
+      background: var(--color-forest);
+      color: var(--color-gold);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid var(--color-gold);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-submit-intent-gold:hover {
+      background: var(--color-deep-green);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(14, 42, 29, 0.25);
+    }
+
+    .don-intent-notice {
+      display: none;
+      background: rgba(23, 61, 42, 0.06);
+      border: 1px solid var(--color-forest);
+      border-radius: 14px;
+      padding: 18px;
+      margin-top: 20px;
+      color: var(--color-forest);
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    /* BANK TRANSFER CARD */
+    .don-bank-card-premium {
+      background: #ffffff;
+      border: 1.5px solid var(--color-gold);
+      border-radius: 24px;
+      padding: 36px 30px;
+      box-shadow: var(--shadow-soft);
+      position: sticky;
+      top: 100px;
+    }
+
+    .don-bank-top {
+      text-align: center;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 20px;
+      margin-bottom: 22px;
+    }
+
+    .don-bank-icon-badge {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(185, 149, 85, 0.14);
+      color: var(--color-forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin: 0 auto 12px;
+    }
+
+    .don-bank-title {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--color-forest);
+      margin-bottom: 8px;
+    }
+
+    .don-bank-subtitle {
+      font-size: 0.86rem;
+      color: var(--color-muted);
+      line-height: 1.55;
+    }
+
+    .don-bank-rows-box {
+      background: var(--color-ivory);
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 22px;
+    }
+
+    .don-bank-row-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px dashed rgba(23, 61, 42, 0.12);
+    }
+
+    .don-bank-row-item:last-child {
+      border-bottom: none;
+    }
+
+    .don-bank-label-text {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--color-muted);
+    }
+
+    .don-bank-val-text {
+      font-family: monospace;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--color-forest);
+    }
+
+    .btn-copy-mini {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--color-forest);
+      transition: all 0.2s ease;
+    }
+
+    .btn-copy-mini:hover {
+      background: var(--color-forest);
+      color: var(--color-gold);
+      border-color: var(--color-forest);
+    }
+
+    .btn-copy-all-gold {
+      width: 100%;
+      background: var(--color-gold);
+      color: var(--color-deep-green);
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 13px;
+      border-radius: 10px;
+      border: none;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-copy-all-gold:hover {
+      background: var(--color-gold-light);
+      transform: translateY(-2px);
+    }
+
+    /* ── 6. PROCESS TIMELINE ── */
+    .don-process-section {
+      background: #ffffff;
+      padding: 90px 24px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .don-center-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 56px;
+    }
+
+    .don-process-timeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .don-process-timeline::before {
+      content: '';
+      position: absolute;
+      top: 32px;
+      left: 70px;
+      right: 70px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--color-gold) 0%, var(--color-forest) 100%);
+      z-index: 1;
+    }
+
+    .don-process-step-item {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 8px;
+    }
+
+    .don-process-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--color-warm-beige);
+      border: 2px solid var(--color-gold);
+      color: var(--color-forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0 auto 16px;
+      transition: all 0.3s ease;
+    }
+
+    .don-process-step-item:hover .don-process-circle {
+      transform: scale(1.08);
+      background: var(--color-forest);
+      color: var(--color-gold);
+    }
+
+    .don-process-step-title {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      color: var(--color-forest);
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .don-process-step-desc {
+      font-size: 0.82rem;
+      color: var(--color-muted);
+      line-height: 1.5;
+    }
+
+    /* ── 7. IMPORTANT NOTICE CARD ── */
+    .don-notice-card-gold {
+      max-width: 900px;
+      margin: 54px auto 0;
+      background: linear-gradient(135deg, rgba(185, 149, 85, 0.12) 0%, rgba(23, 61, 42, 0.05) 100%);
+      border: 1px solid var(--color-gold);
+      border-radius: 18px;
+      padding: 26px 34px;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      color: var(--color-forest);
+    }
+
+    .don-notice-info-icon {
+      font-size: 1.8rem;
+      color: var(--color-gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .don-notice-card-title {
+      font-family: var(--font-serif);
+      font-size: 1.18rem;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .don-notice-card-text {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--color-charcoal);
+    }
+
+    /* ── 8. TRUST STRIP SECTION ── */
+    .don-trust-strip-section {
+      padding: 85px 24px;
+      background: var(--color-ivory);
+    }
+
+    .don-trust-cards-grid {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .don-trust-item-card {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
+      padding: 32px 24px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .don-trust-item-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--color-gold);
+    }
+
+    .don-trust-icon-wrap {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: rgba(185, 149, 85, 0.14);
+      color: var(--color-forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin: 0 auto 18px;
+    }
+
+    .don-trust-card-head {
+      font-family: var(--font-serif);
+      font-size: 1.18rem;
+      color: var(--color-forest);
+      margin-bottom: 8px;
+    }
+
+    .don-trust-card-sub {
+      font-size: 0.85rem;
+      color: var(--color-muted);
+      line-height: 1.55;
+    }
+
+    /* ── 9. FAQ ACCORDION ── */
+    .don-faq-section {
+      background: #ffffff;
+      padding: 90px 24px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .don-faq-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .don-faq-card {
+      background: var(--color-ivory);
+      border: 1px solid var(--color-border);
+      border-radius: 14px;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+
+    .don-faq-head {
+      padding: 20px 24px;
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--color-forest);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .don-faq-body {
+      padding: 0 24px 20px;
+      font-size: 0.9rem;
+      color: var(--color-muted);
+      line-height: 1.6;
+      display: none;
+    }
+
+    .don-faq-card.active .don-faq-body {
+      display: block;
+    }
+
+    .don-faq-card.active .don-faq-icon {
+      transform: rotate(180deg);
+    }
+
+    /* ── 10. CONTACT FOR HELP ── */
+    .don-contact-help-section {
+      background: var(--color-ivory);
+      padding: 80px 24px;
+    }
+
+    .don-contact-help-grid {
+      max-width: 1040px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .don-contact-card-box {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: 18px;
+      padding: 26px 20px;
+      text-align: center;
+    }
+
+    .don-contact-card-icon {
+      font-size: 1.6rem;
+      color: var(--color-gold);
+      margin-bottom: 12px;
+    }
+
+    .don-contact-card-label {
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-muted);
+      margin-bottom: 4px;
+    }
+
+    .don-contact-card-val {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-forest);
+      word-break: break-word;
+    }
+
+    /* ── 11. FINAL CTA BANNER & FOOTER (UI/UX DESIGN ELEVATION) ── */
+    .don-cta-banner-full {
+      position: relative;
+      background: radial-gradient(circle at 50% 20%, rgba(185, 149, 85, 0.22) 0%, transparent 65%), linear-gradient(180deg, var(--color-forest) 0%, var(--color-deep-green) 100%);
+      color: #ffffff;
+      padding: 105px 24px;
+      text-align: center;
+      border-top: 1px solid var(--color-border);
+      overflow: hidden;
+    }
+
+    .don-cta-banner-full::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: radial-gradient(rgba(185, 149, 85, 0.12) 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    .don-cta-banner-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .don-cta-pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      background: rgba(14, 42, 29, 0.75);
+      border: 1px solid var(--color-border);
+      border-radius: 30px;
+      padding: 8px 22px;
+      margin-bottom: 24px;
+      backdrop-filter: blur(10px);
+    }
+
+    .don-cta-banner-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.3rem, 4vw, 3.4rem);
+      margin-bottom: 18px;
+      line-height: 1.18;
+      letter-spacing: -0.01em;
+    }
+
+    .don-cta-banner-title span {
+      color: var(--color-gold);
+      font-style: italic;
+    }
+
+    .don-cta-banner-sub {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 32px;
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    .don-cta-micro-badges {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 38px;
+      flex-wrap: wrap;
+    }
+
+    .don-micro-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    .don-micro-badge i {
+      color: var(--color-gold);
+    }
+
+    .don-cta-banner-btns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .btn-cta-gold-solid {
+      background: var(--color-gold);
+      color: var(--color-deep-green);
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 40px;
+      font-size: 0.84rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 10px 28px rgba(185, 149, 85, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-cta-gold-solid:hover {
+      background: var(--color-gold-light);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(185, 149, 85, 0.55);
+    }
+
+    .btn-cta-white-outline {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      font-weight: 600;
+      padding: 16px 36px;
+      border-radius: 40px;
+      font-size: 0.84rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      backdrop-filter: blur(10px);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-cta-white-outline:hover {
+      background: rgba(255, 255, 255, 0.18);
+      border-color: #ffffff;
+      transform: translateY(-3px);
+    }
+
+    /* ── FOOTER UI STYLING (DARK FOREST DEEP CONTRAST) ── */
+    .site-footer {
+      background-color: #091c13;
+      color: #ffffff;
+      padding: 80px 24px 30px;
+      border-top: 1px solid rgba(185, 149, 85, 0.3);
+    }
+
+    .site-footer .footer-container {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .site-footer .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.8fr 1.1fr;
+      gap: 48px;
+      margin-bottom: 50px;
+    }
+
+    .site-footer .logo-title {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #ffffff !important;
+      letter-spacing: 0.08em;
+    }
+
+    .site-footer .logo-tagline {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--color-gold) !important;
+      letter-spacing: 0.22em;
+      display: block;
+    }
+
+    .site-footer .footer-desc {
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.82) !important;
+      margin-top: 14px;
+      max-width: 380px;
+    }
+
+    .site-footer .footer-col h3 {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-gold) !important;
+      margin-bottom: 20px;
+    }
+
+    .site-footer .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .site-footer .footer-col ul li {
+      margin-bottom: 12px;
+    }
+
+    .site-footer .footer-col ul li a {
+      color: rgba(255, 255, 255, 0.82) !important;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .site-footer .footer-col ul li a:hover {
+      color: var(--color-gold) !important;
+      padding-left: 4px;
+    }
+
+    .site-footer .footer-col p {
+      color: rgba(255, 255, 255, 0.82) !important;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .site-footer .footer-col p i {
+      color: var(--color-gold);
+      font-size: 1rem;
+      width: 18px;
+    }
+
+    .site-footer .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+      text-align: center;
+    }
+
+    .site-footer .footer-bottom p {
+      font-size: 0.84rem;
+      color: rgba(255, 255, 255, 0.65) !important;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .don-why-grid, .don-main-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .don-bank-card-premium {
+        position: static;
+      }
+      .don-process-timeline {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .don-process-timeline::before {
+        display: none;
+      }
+      .don-trust-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .don-contact-help-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .don-impact-grid, .don-grid-2, .don-trust-cards-grid, .don-contact-help-grid {
+        grid-template-columns: 1fr;
+      }
+      .don-form-card, .don-bank-card-premium {
+        padding: 24px;
+      }
+      .don-notice-card-gold {
+        flex-direction: column;
+        padding: 22px;
+      }
+      .don-progress-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .don-progress-divider {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">BAL JYOTI</div>
+      <div class="preloader-sub">FOUNDATION</div>
+      <div class="preloader-bar"></div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <img src="images/logo.png" alt="Bal Jyoti Foundation Logo" class="logo-img">
+        <div class="logo-text">
+          <span class="logo-title">BAL JYOTI</span>
+          <span class="logo-tagline">FOUNDATION</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="join.html" class="nav-link">Join Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="donate.html" class="nav-link active">Donate</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="donate.html" class="btn-donate-header"><i class="fa-solid fa-heart"></i> Donate Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. HERO SECTION -->
+  <section class="don-hero">
+    <div class="don-hero-content fade-up">
+      
+      <!-- HERO EMBLEM WITH LOGO -->
+      <div class="don-hero-emblem">
+        <img src="images/logo.png" alt="Bal Jyoti Foundation Logo" class="don-hero-logo-icon">
+        <span class="don-emblem-text">BAL JYOTI FOUNDATION</span>
+      </div>
+
+      <div class="don-hero-label">
+        <i class="fa-solid fa-heart-pulse"></i> OFFICIAL DONATION PORTAL • 80G TAX EXEMPT NGO
+      </div>
+
+      <h1 class="don-hero-title">Your Support Creates <span class="don-gold-title">Lasting Change</span></h1>
+      
+      <p class="don-hero-sub">Empowering rural artisans, women entrepreneurs, and children across Bihar through direct, 100% transparent bank transfer contributions.</p>
+
+      <div class="don-hero-btn-group">
+        <a href="#donate-form-section" class="btn-hero-cta"><i class="fa-solid fa-heart"></i> Start Your Donation ↓</a>
+        <a href="#bank-card-anchor" class="btn-hero-secondary"><i class="fa-solid fa-building-columns"></i> View Bank Details →</a>
+      </div>
+
+      <!-- FLOATING GLASS STAT CARDS -->
+      <div class="don-hero-stats-row">
+        <div class="don-hero-stat-card">
+          <span class="don-stat-num">20,000+</span>
+          <span class="don-stat-lbl">Lives Empowered</span>
+        </div>
+        <div class="don-hero-stat-card">
+          <span class="don-stat-num">500+</span>
+          <span class="don-stat-lbl">Women Artisans</span>
+        </div>
+        <div class="don-hero-stat-card">
+          <span class="don-stat-num">150+</span>
+          <span class="don-stat-lbl">Village Clusters</span>
+        </div>
+        <div class="don-hero-stat-card">
+          <span class="don-stat-num">100%</span>
+          <span class="don-stat-lbl">Direct Bank Transfer</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2. WHY WE DONATE -->
+  <section class="don-why-section">
+    <div class="don-container">
+      <div class="don-why-grid">
+        <div class="don-why-left fade-up">
+          <span class="don-eyebrow">WHY WE DONATE</span>
+          <h2 class="don-title-serif">Every contribution helps create opportunities where they are needed most.</h2>
+          <p class="don-why-desc">Bal Jyoti Foundation empowers rural women and artisans across Bihar through handloom rugs, bamboo crafts, literacy, and community economic dignity.</p>
+        </div>
+
+        <div class="don-impact-grid fade-up">
+          <div class="don-impact-card">
+            <div class="don-impact-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3 class="don-impact-card-title">Education</h3>
+            <p class="don-impact-card-text">Supporting rural children with quality schooling materials and learning centers.</p>
+          </div>
+
+          <div class="don-impact-card">
+            <div class="don-impact-icon"><i class="fa-solid fa-person-dress"></i></div>
+            <h3 class="don-impact-card-title">Women Empowerment</h3>
+            <p class="don-impact-card-text">Enabling rural women to become independent craft entrepreneurs.</p>
+          </div>
+
+          <div class="don-impact-card">
+            <div class="don-impact-icon"><i class="fa-solid fa-hands-holding-circle"></i></div>
+            <h3 class="don-impact-card-title">Artisan Livelihoods</h3>
+            <p class="don-impact-card-text">Preserving heritage handloom rugs, bamboo crafts, and traditional stitching.</p>
+          </div>
+
+          <div class="don-impact-card">
+            <div class="don-impact-icon"><i class="fa-solid fa-seedling"></i></div>
+            <h3 class="don-impact-card-title">Sustainable Communities</h3>
+            <p class="don-impact-card-text">Fostering eco-tourism, clean sanitation, and self-reliant village clusters.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. DONATION FORM, 4. DONOR INFO & 5. BANK TRANSFER -->
+  <section class="don-main-section" id="donate-form-section">
+    <div class="don-container">
+      <div class="don-main-grid">
+
+        <!-- DONATION FORM CARD -->
+        <div class="don-form-card fade-up">
+          
+          <!-- PROGRESS INDICATOR BAR -->
+          <div class="don-progress-bar">
+            <div class="don-progress-step active">
+              <span class="don-step-num">01</span>
+              <span>Donation Details</span>
+            </div>
+            <div class="don-progress-divider"></div>
+            <div class="don-progress-step active">
+              <span class="don-step-num">02</span>
+              <span>Your Information</span>
+            </div>
+            <div class="don-progress-divider"></div>
+            <div class="don-progress-step">
+              <span class="don-step-num">03</span>
+              <span>Bank Transfer</span>
+            </div>
+          </div>
+
+          <!-- SECTION: DONATION DETAILS -->
+          <h2 class="don-section-group-title">Make Your Contribution</h2>
+          <p class="don-section-group-sub">Tell us how you would like to support the community.</p>
+
+          <form id="offlineDonationForm">
+            <!-- Amount Selection -->
+            <div class="don-field">
+              <label>Donation Amount (INR) *</label>
+              <div class="don-amount-pills">
+                <div class="don-pill" onclick="selectAmountVal(500)">₹500</div>
+                <div class="don-pill" onclick="selectAmountVal(1000)">₹1,000</div>
+                <div class="don-pill active" onclick="selectAmountVal(2500)">₹2,500</div>
+                <div class="don-pill" onclick="selectAmountVal(5000)">₹5,000</div>
+                <div class="don-pill" onclick="selectAmountVal(10000)">₹10,000</div>
+                <div class="don-pill" onclick="focusCustomAmountVal()">Custom</div>
+              </div>
+              <input type="number" id="don-amount-input" class="don-input-control" value="2500" min="100" placeholder="Enter amount in INR" required>
+            </div>
+
+            <!-- Purpose Dropdown -->
+            <div class="don-field">
+              <label for="don-purpose-select">Donation Purpose *</label>
+              <select id="don-purpose-select" class="don-input-control" required>
+                <option value="Education">Education</option>
+                <option value="Women Empowerment" selected>Women Empowerment</option>
+                <option value="Handmade Rugs">Handmade Rugs</option>
+                <option value="Bamboo Crafts">Bamboo Crafts</option>
+                <option value="Basketry">Basketry</option>
+                <option value="Stitching">Stitching</option>
+                <option value="Eco Tourism">Eco Tourism</option>
+                <option value="General Support">General Support</option>
+              </select>
+            </div>
+
+            <!-- Message (Optional) -->
+            <div class="don-field">
+              <label for="don-message">Message (Optional)</label>
+              <textarea id="don-message" class="don-input-control" rows="3" placeholder="Share a message of encouragement for our artisans..."></textarea>
+            </div>
+
+            <!-- SECTION: DONOR INFORMATION -->
+            <div style="margin: 32px 0 24px; border-top: 1px solid var(--color-border); padding-top: 24px;">
+              <h2 class="don-section-group-title">Your Information</h2>
+              <p class="don-section-group-sub">Please enter your details for intent logging and receipt issuance.</p>
+
+              <!-- PERSONAL INFORMATION GROUP -->
+              <div class="don-group-block">
+                <div class="don-group-block-title"><i class="fa-solid fa-user"></i> Personal Information</div>
+                <div class="don-grid-2">
+                  <div class="don-field" style="margin-bottom: 0;">
+                    <label for="don-fullname">Full Name *</label>
+                    <input type="text" id="don-fullname" class="don-input-control" placeholder="e.g. Ananya Sharma" required>
+                  </div>
+                  <div class="don-field" style="margin-bottom: 0;">
+                    <label for="don-email">Email Address *</label>
+                    <input type="email" id="don-email" class="don-input-control" placeholder="e.g. ananya@example.com" required>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CONTACT INFORMATION GROUP -->
+              <div class="don-group-block">
+                <div class="don-group-block-title"><i class="fa-solid fa-address-book"></i> Contact Information</div>
+                <div class="don-field">
+                  <label for="don-phone">Phone Number *</label>
+                  <input type="tel" id="don-phone" class="don-input-control" placeholder="+91 98765 43210" required>
+                </div>
+                <div class="don-grid-2">
+                  <div class="don-field" style="margin-bottom: 0;">
+                    <label for="don-city">City</label>
+                    <input type="text" id="don-city" class="don-input-control" placeholder="Patna / New Delhi">
+                  </div>
+                  <div class="don-field" style="margin-bottom: 0;">
+                    <label for="don-state">State</label>
+                    <input type="text" id="don-state" class="don-input-control" placeholder="Bihar">
+                  </div>
+                </div>
+              </div>
+
+              <!-- IDENTITY INFORMATION GROUP -->
+              <div class="don-group-block" style="margin-bottom: 0;">
+                <div class="don-group-block-title"><i class="fa-solid fa-id-card"></i> Identity Information</div>
+                <div class="don-grid-2">
+                  <div class="don-field" style="margin-bottom: 0;">
+                    <label for="don-country">Country</label>
+                    <input type="text" id="don-country" class="don-input-control" value="India">
+                  </div>
+                  <div class="don-field" style="margin-bottom: 0;">
+                    <label for="don-pan">PAN Number (Optional for 80G)</label>
+                    <input type="text" id="don-pan" class="don-input-control" placeholder="ABCDE1234F" style="text-transform: uppercase;">
+                  </div>
+                </div>
+              </div>
+
+              <div class="don-confirm-check">
+                <input type="checkbox" id="don-accurate-check" required>
+                <label for="don-accurate-check">I confirm that the information provided is accurate.</label>
+              </div>
+
+              <button type="submit" class="btn-submit-intent-gold">
+                <i class="fa-solid fa-paper-plane"></i> Record Donation Intent
+              </button>
+            </div>
+          </form>
+
+          <div class="don-intent-notice" id="donSuccessNotice">
+            <h4 style="font-family: var(--font-serif); font-size: 1.1rem; margin-bottom: 6px; color: var(--color-forest);">
+              <i class="fa-solid fa-circle-check" style="color: var(--color-gold);"></i> Donation Intent Recorded!
+            </h4>
+            <p>Thank you! Please proceed to transfer the funds directly to our bank account details on the right, and email your transaction screenshot to <strong class="donation-contact-email" id="contact-info-donation-email">info@baljyotifoundation.org</strong> for verification.</p>
+          </div>
+        </div>
+
+        <!-- 5. BANK TRANSFER CARD -->
+        <div class="don-bank-card-premium fade-up" id="bank-card-anchor">
+          <div class="don-bank-top">
+            <div class="don-bank-icon-badge">
+              <i class="fa-solid fa-building-columns"></i>
+            </div>
+            <h2 class="don-bank-title">Complete Your Donation by Bank Transfer</h2>
+            <p class="don-bank-subtitle">After submitting your donation details, transfer your contribution directly to the Bal Jyoti Foundation bank account below.</p>
+          </div>
+
+          <div class="don-bank-rows-box">
+            <div class="don-bank-row-item">
+              <span class="don-bank-label-text">ACCOUNT NAME</span>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="don-bank-val-text bank-val-name" id="bank-val-name">Bal Jyoti Foundation</span>
+                <button class="btn-copy-mini" onclick="copyValueText('bank-val-name', 'Account Name')">Copy</button>
+              </div>
+            </div>
+
+            <div class="don-bank-row-item">
+              <span class="don-bank-label-text">BANK NAME</span>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="don-bank-val-text bank-val-bank" id="bank-val-bank">Punjab National Bank</span>
+                <button class="btn-copy-mini" onclick="copyValueText('bank-val-bank', 'Bank Name')">Copy</button>
+              </div>
+            </div>
+
+            <div class="don-bank-row-item">
+              <span class="don-bank-label-text">ACCOUNT NUMBER</span>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="don-bank-val-text bank-val-acc" id="bank-val-acc">49220002100004394</span>
+                <button class="btn-copy-mini" onclick="copyValueText('bank-val-acc', 'Account Number')">Copy</button>
+              </div>
+            </div>
+
+            <div class="don-bank-row-item">
+              <span class="don-bank-label-text">IFSC CODE</span>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="don-bank-val-text bank-val-ifsc" id="bank-val-ifsc">PUNB0492200</span>
+                <button class="btn-copy-mini" onclick="copyValueText('bank-val-ifsc', 'IFSC Code')">Copy</button>
+              </div>
+            </div>
+
+            <div class="don-bank-row-item">
+              <span class="don-bank-label-text">BRANCH</span>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="don-bank-val-text bank-val-branch-address" id="bank-val-branch-address">Bodhgaya (Gaya), Bihar – 824231</span>
+                <button class="btn-copy-mini" onclick="copyValueText('bank-val-branch-address', 'Branch')">Copy</button>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn-copy-all-gold" onclick="copyAllBankDetailsGold()">
+            <i class="fa-solid fa-copy"></i> Copy All Details
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. DONATION PROCESS TIMELINE -->
+  <section class="don-process-section">
+    <div class="don-container">
+      <div class="don-center-header fade-up">
+        <span class="don-eyebrow">TRANSPARENT PROCESS</span>
+        <h2 class="don-title-serif">Transfer your contribution directly to the bank account above.</h2>
+        <p style="color: var(--color-muted); font-size: 0.95rem;">Follow these 5 steps to complete your donation and receive your tax receipt.</p>
+      </div>
+
+      <div class="don-process-timeline fade-up">
+        <div class="don-process-step-item">
+          <div class="don-process-circle">1</div>
+          <h3 class="don-process-step-title">Fill Details</h3>
+          <p class="don-process-step-desc">Fill your donation details & intent in the form above.</p>
+        </div>
+
+        <div class="don-process-step-item">
+          <div class="don-process-circle">2</div>
+          <h3 class="don-process-step-title">Transfer Amount</h3>
+          <p class="don-process-step-desc">Transfer the amount directly to our official bank account.</p>
+        </div>
+
+        <div class="don-process-step-item">
+          <div class="don-process-circle">3</div>
+          <h3 class="don-process-step-title">Save Receipt</h3>
+          <p class="don-process-step-desc">Save a screenshot or PDF copy of your transaction receipt.</p>
+        </div>
+
+        <div class="don-process-step-item">
+          <div class="don-process-circle">4</div>
+          <h3 class="don-process-step-title">Send Receipt</h3>
+          <p class="don-process-step-desc">Send the receipt to the Foundation via email/contact.</p>
+        </div>
+
+        <div class="don-process-step-item">
+          <div class="don-process-circle">5</div>
+          <h3 class="don-process-step-title">Confirmation</h3>
+          <p class="don-process-step-desc">Receive confirmation and your official 80G tax exemption receipt.</p>
+        </div>
+      </div>
+
+      <!-- 7. IMPORTANT INFORMATION NOTICE -->
+      <div class="don-notice-card-gold fade-up">
+        <div class="don-notice-info-icon"><i class="fa-solid fa-circle-info"></i></div>
+        <div>
+          <h3 class="don-notice-card-title">Important Donation Information</h3>
+          <p class="don-notice-card-text" id="donation-instructions-text">Please mention your name and the purpose of your donation in the bank transfer description. After completing the transfer, please send your transaction receipt to our official contact so that our team can verify and acknowledge your contribution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. TRUST DESIGN -->
+  <section class="don-trust-strip-section">
+    <div class="don-container">
+      <div class="don-center-header fade-up" style="margin-bottom: 44px;">
+        <span class="don-eyebrow">YOUR SUPPORT MATTERS</span>
+        <h2 class="don-title-serif">Built on Integrity & Transparency</h2>
+        <p style="color: var(--color-muted); font-size: 0.95rem;">Every donation directly advances sustainable livelihoods for rural women and artisans.</p>
+      </div>
+
+      <div class="don-trust-cards-grid">
+        <div class="don-trust-item-card fade-up">
+          <div class="don-trust-icon-wrap"><i class="fa-solid fa-eye"></i></div>
+          <h3 class="don-trust-card-head">Transparent Process</h3>
+          <p class="don-trust-card-sub">Full operational accountability, audit records, and 80G tax exemption receipts.</p>
+        </div>
+
+        <div class="don-trust-item-card fade-up">
+          <div class="don-trust-icon-wrap"><i class="fa-solid fa-people-roof"></i></div>
+          <h3 class="don-trust-card-head">Community Impact</h3>
+          <p class="don-trust-card-sub">100% of contributions directly empower rural women, children, and heritage craft clusters.</p>
+        </div>
+
+        <div class="don-trust-item-card fade-up">
+          <div class="don-trust-icon-wrap"><i class="fa-solid fa-building-columns"></i></div>
+          <h3 class="don-trust-card-head">Direct Bank Transfer</h3>
+          <p class="don-trust-card-sub">Zero third-party gateway commissions. Every rupee goes directly to our community programs.</p>
+        </div>
+
+        <div class="don-trust-item-card fade-up">
+          <div class="don-trust-icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 class="don-trust-card-head">Secure Information</h3>
+          <p class="don-trust-card-sub">Your personal donor information is strictly encrypted and protected.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FREQUENTLY ASKED QUESTIONS -->
+  <section class="don-faq-section">
+    <div class="don-container">
+      <div class="don-center-header fade-up">
+        <span class="don-eyebrow">QUESTIONS & ANSWERS</span>
+        <h2 class="don-title-serif">Frequently Asked Questions</h2>
+        <p style="color: var(--color-muted);">Everything you need to know about making a direct bank transfer donation.</p>
+      </div>
+
+      <div class="don-faq-wrapper fade-up">
+        <div class="don-faq-card active">
+          <div class="don-faq-head" onclick="toggleFaqCard(this)">
+            How do I transfer money directly to the bank account?
+            <i class="fa-solid fa-chevron-down don-faq-icon"></i>
+          </div>
+          <div class="don-faq-body">
+            You can use Net Banking, Mobile Banking app (NEFT / RTGS / IMPS), or visit your bank branch to transfer money to our Punjab National Bank account details listed above.
+          </div>
+        </div>
+
+        <div class="don-faq-card">
+          <div class="don-faq-head" onclick="toggleFaqCard(this)">
+            Will I receive an 80G Tax Exemption Receipt?
+            <i class="fa-solid fa-chevron-down don-faq-icon"></i>
+          </div>
+          <div class="don-faq-body">
+            Yes! Bal Jyoti Foundation is a registered 12A & 80G non-profit organisation. Donations qualify for 50% tax deduction under Section 80G of the Income Tax Act. Please provide your PAN number when submitting receipt details.
+          </div>
+        </div>
+
+        <div class="don-faq-card">
+          <div class="don-faq-head" onclick="toggleFaqCard(this)">
+            How long does verification take after sending the receipt?
+            <i class="fa-solid fa-chevron-down don-faq-icon"></i>
+          </div>
+          <div class="don-faq-body">
+            Our finance team verifies the credit within 24 business hours of receiving your transaction screenshot and emails your official tax receipt.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. CONTACT FOR HELP -->
+  <section class="don-contact-help-section">
+    <div class="don-container">
+      <div class="don-center-header fade-up">
+        <span class="don-eyebrow">NEED ASSISTANCE?</span>
+        <h2 class="don-title-serif">Need Help With Your Donation?</h2>
+        <p style="color: var(--color-muted); font-size: 0.95rem;">Contact our team if you need assistance with the bank transfer.</p>
+      </div>
+
+      <div class="don-contact-help-grid fade-up">
+        <div class="don-contact-card-box">
+          <div class="don-contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="don-contact-card-label">Phone Number</div>
+          <div class="don-contact-card-val donation-contact-phone" id="donation-contact-phone">+91 12345 67890</div>
+        </div>
+
+        <div class="don-contact-card-box">
+          <div class="don-contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="don-contact-card-label">Official Email</div>
+          <div class="don-contact-card-val donation-contact-email" id="donation-contact-email">info@baljyotifoundation.org</div>
+        </div>
+
+        <div class="don-contact-card-box">
+          <div class="don-contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="don-contact-card-label">Office Address</div>
+          <div class="don-contact-card-val contact-val-address" id="contact-address">Bodhgaya, Bihar – 824231, India</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FINAL CTA BANNER -->
+  <section class="don-cta-banner-full">
+    <div class="don-cta-banner-inner fade-up">
+      <div class="don-cta-pill-badge">
+        <i class="fa-solid fa-heart-pulse"></i> EMPOWER RURAL COMMUNITIES
+      </div>
+      <h2 class="don-cta-banner-title">Together, We Can Create <span>Sustainable Change</span>.</h2>
+      <p class="don-cta-banner-sub">Your contribution directly supports rural education, women artisan clusters, and indigenous craft preservation across Bihar.</p>
+
+      <div class="don-cta-micro-badges">
+        <span class="don-micro-badge"><i class="fa-solid fa-certificate"></i> 80G Tax Exempt</span>
+        <span class="don-micro-badge"><i class="fa-solid fa-building-columns"></i> Direct Bank Transfer</span>
+        <span class="don-micro-badge"><i class="fa-solid fa-hands-holding-heart"></i> 100% Grassroots Impact</span>
+      </div>
+
+      <div class="don-cta-banner-btns">
+        <a href="about.html#contact-section" class="btn-cta-gold-solid"><i class="fa-solid fa-paper-plane"></i> Contact Us</a>
+        <a href="index.html" class="btn-cta-white-outline"><i class="fa-solid fa-house"></i> Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col brand-col">
+          <div class="footer-logo">
+            <span class="logo-title">BAL JYOTI</span>
+            <span class="logo-tagline">FOUNDATION</span>
+          </div>
+          <p class="footer-desc">Empowering rural artisans, women, and children through sustainable craft, handloom heritage, and education in Bihar.</p>
+        </div>
+        <div class="footer-col links-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="join.html">Join Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+        <div class="footer-col contact-col">
+          <h3>Contact Us</h3>
+          <p><i class="fa-solid fa-location-dot"></i> <span class="contact-val-address" id="contact-address-footer">Bodhgaya, Bihar - 824231, India</span></p>
+          <p><i class="fa-solid fa-phone"></i> <span class="contact-val-phone" id="contact-phone-footer">+91 12345 67890</span></p>
+          <p><i class="fa-solid fa-envelope"></i> <span class="contact-val-email" id="contact-email-footer">info@baljyotifoundation.org</span></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Bal Jyoti Foundation. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-notify" style="position: fixed; bottom: 30px; right: 30px; z-index: 9999; display: flex; flex-direction: column; gap: 10px;"></div>
+
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
+  <script src="cms-render.js"></script>
+
+  <script>
+    function selectAmountVal(val) {
+      document.querySelectorAll('.don-pill').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      document.getElementById('don-amount-input').value = val;
+    }
+
+    function focusCustomAmountVal() {
+      document.querySelectorAll('.don-pill').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      const input = document.getElementById('don-amount-input');
+      input.value = '';
+      input.focus();
+    }
+
+    function copyValueText(elementId, labelName) {
+      const el = document.getElementById(elementId);
+      if (!el) return;
+      const text = el.textContent.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        showToastMsg(`✓ Copied`);
+      }).catch(() => {
+        showToastMsg(`✓ Copied`);
+      });
+    }
+
+    function copyAllBankDetailsGold() {
+      const name = document.getElementById('bank-val-name')?.textContent || 'Bal Jyoti Foundation';
+      const bank = document.getElementById('bank-val-bank')?.textContent || 'Punjab National Bank';
+      const acc = document.getElementById('bank-val-acc')?.textContent || '49220002100004394';
+      const ifsc = document.getElementById('bank-val-ifsc')?.textContent || 'PUNB0492200';
+      const branch = document.getElementById('bank-val-branch-address')?.textContent || 'Bodhgaya (Gaya), Bihar – 824231';
+
+      const text = `BAL JYOTI FOUNDATION — BANK DETAILS:
+Account Name: ${name}
+Bank Name: ${bank}
+Account Number: ${acc}
+IFSC Code: ${ifsc}
+Branch: ${branch}`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        showToastMsg('✓ Copied All Details');
+      }).catch(() => {
+        showToastMsg('✓ Copied');
+      });
+    }
+
+    function showToastMsg(msg) {
+      const container = document.getElementById('toast-notify');
+      if (!container) return;
+
+      const toast = document.createElement('div');
+      toast.style.cssText = 'background: #173D2A; color: #B99555; border: 1px solid #B99555; padding: 12px 20px; border-radius: 24px; font-size: 0.84rem; font-weight: 600; box-shadow: 0 10px 24px rgba(0,0,0,0.25); transition: all 0.3s ease;';
+      toast.innerHTML = `<i class="fa-solid fa-circle-check"></i> ${msg}`;
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(8px)';
+        setTimeout(() => toast.remove(), 300);
+      }, 3000);
+    }
+
+    function toggleFaqCard(el) {
+      el.parentElement.classList.toggle('active');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    });
+
+    const form = document.getElementById('offlineDonationForm');
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const amount = document.getElementById('don-amount-input').value;
+        const purpose = document.getElementById('don-purpose-select').value;
+        const donorName = document.getElementById('don-fullname').value;
+        const donorEmail = document.getElementById('don-email').value;
+        const donorPhone = document.getElementById('don-phone').value;
+        const donorAddress = `${document.getElementById('don-city').value || ''}, ${document.getElementById('don-state').value || ''}, ${document.getElementById('don-country').value || 'India'}`;
+        const panNumber = document.getElementById('don-pan').value;
+        const message = document.getElementById('don-message').value;
+
+        try {
+          await fetch('/api/v1/donations', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ donorName, donorEmail, donorPhone, donorAddress, panNumber, amount, purpose, message, paymentType: 'Offline Bank Transfer' })
+          });
+        } catch (err) {}
+
+        const notice = document.getElementById('donSuccessNotice');
+        if (notice) {
+          notice.style.display = 'block';
+          notice.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        showToastMsg('✓ Donation Intent Logged. Please transfer funds below.');
+      });
+    }
+  </script>
+</body>
+</html>

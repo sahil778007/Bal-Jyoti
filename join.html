@@ -1,0 +1,1977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Us | Bal Jyoti Foundation — Empower Rural Communities</title>
+
+  <!-- Primary SEO Meta Tags -->
+  <meta name="description" content="Join Bal Jyoti Foundation as an intern, trainee, volunteer, full-time team member, or partner. Help build sustainable livelihoods and empower rural artisans in India.">
+  <meta name="keywords" content="Join Bal Jyoti Foundation, volunteer in Bihar, artisan internship, non-profit jobs India, social impact career, rural development fellowship">
+  <meta name="author" content="Bal Jyoti Foundation">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://baljyoti.org/join.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://baljyoti.org/join.html">
+  <meta property="og:title" content="Join Our Mission | Bal Jyoti Foundation">
+  <meta property="og:description" content="Become part of Bal Jyoti Foundation and help create sustainable livelihoods, empower rural communities, and preserve traditional crafts.">
+  <meta property="og:image" content="https://baljyoti.org/images/hero_community_training.jpg">
+
+  <!-- Google Fonts: Playfair Display & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Core Site Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Page-Specific Luxury Join Us Styles -->
+  <style>
+    /* =====================================================================
+       BAL JYOTI FOUNDATION — JOIN US AWWWARDS EDITION
+       Palette: Forest Green (#123524), Olive (#4A6B3C), Gold (#C6A15B), Ivory (#FAF8F3)
+       ===================================================================== */
+
+    /* ── 1. HERO SECTION ── */
+    .join-hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: calc(var(--header-height) + 40px) 24px 80px;
+      overflow: hidden;
+      background-color: var(--primary-forest);
+      color: #ffffff;
+    }
+
+    .join-hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      filter: brightness(0.7) contrast(1.1);
+      transform: scale(1.05);
+      transition: transform 10s ease-out;
+      will-change: transform;
+    }
+    .join-hero:hover .join-hero-bg {
+      transform: scale(1.0);
+    }
+
+    .join-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(18, 53, 36, 0.65) 0%, rgba(18, 53, 36, 0.92) 80%);
+      backdrop-filter: blur(2px);
+    }
+
+    .join-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 960px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    /* Breadcrumbs */
+    .join-breadcrumb {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 24px;
+      padding: 6px 20px;
+      background: rgba(198, 161, 91, 0.12);
+      border: 1px solid rgba(198, 161, 91, 0.35);
+      border-radius: 30px;
+      backdrop-filter: blur(8px);
+    }
+    .join-breadcrumb a {
+      color: rgba(255, 255, 255, 0.8);
+      transition: var(--transition-fast);
+    }
+    .join-breadcrumb a:hover {
+      color: var(--accent-gold);
+    }
+    .join-breadcrumb span.sep {
+      opacity: 0.5;
+      font-size: 0.6rem;
+    }
+
+    .join-hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 5.5vw, 5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+      text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .join-hero-title span {
+      color: var(--accent-gold);
+      font-style: italic;
+    }
+
+    .join-hero-subtitle {
+      font-family: var(--font-sans);
+      font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 780px;
+      margin: 0 auto 40px;
+    }
+
+    /* Scroll Indicator */
+    .hero-scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      z-index: 3;
+      cursor: pointer;
+      color: rgba(255, 255, 255, 0.7);
+      transition: var(--transition-fast);
+    }
+    .hero-scroll-indicator:hover {
+      color: var(--accent-gold);
+    }
+    .hero-scroll-text {
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .mouse-icon {
+      width: 24px;
+      height: 38px;
+      border: 2px solid currentColor;
+      border-radius: 12px;
+      position: relative;
+    }
+    .mouse-wheel {
+      width: 4px;
+      height: 8px;
+      background-color: var(--accent-gold);
+      border-radius: 2px;
+      position: absolute;
+      top: 6px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: mouseScroll 2s infinite ease-in-out;
+    }
+    @keyframes mouseScroll {
+      0% { opacity: 1; transform: translate(-50%, 0); }
+      80% { opacity: 0; transform: translate(-50%, 14px); }
+      100% { opacity: 0; transform: translate(-50%, 0); }
+    }
+
+    /* ── SECTION CONTAINERS & HEADINGS ── */
+    .join-section {
+      padding: 100px 0;
+      position: relative;
+    }
+    .join-section-bg-alt {
+      background-color: var(--bg-beige);
+    }
+    .section-header-center {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 60px;
+    }
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.2vw, 3rem);
+      font-weight: 700;
+      color: var(--primary-forest);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ── 2. APPLICATION TYPES CARDS ── */
+    .app-types-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .app-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-light);
+      border-radius: 24px;
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition-medium);
+      box-shadow: var(--shadow-card);
+    }
+
+    .app-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-forest), var(--accent-gold));
+      opacity: 0;
+      transition: var(--transition-fast);
+    }
+
+    /* Card Hover Animation Effects: Lift, Shadow, Border Glow, Icon Zoom */
+    .app-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 24px 50px rgba(18, 53, 36, 0.12), 0 0 25px rgba(198, 161, 91, 0.25);
+      border-color: rgba(198, 161, 91, 0.6);
+      background: rgba(255, 255, 255, 0.98);
+    }
+    .app-card:hover::before {
+      opacity: 1;
+    }
+
+    .app-card-badge {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--secondary-olive);
+      background: rgba(74, 107, 60, 0.1);
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .app-card-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(18, 53, 36, 0.08) 0%, rgba(198, 161, 91, 0.15) 100%);
+      color: var(--primary-forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 24px;
+      transition: var(--transition-medium);
+    }
+    .app-card:hover .app-card-icon {
+      transform: scale(1.15) rotate(5deg);
+      background: var(--primary-forest);
+      color: var(--accent-gold);
+      box-shadow: 0 10px 20px rgba(18, 53, 36, 0.2);
+    }
+
+    .app-card-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-forest);
+      margin-bottom: 12px;
+    }
+
+    .app-card-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 32px;
+      flex-grow: 1;
+    }
+
+    .btn-card-apply {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 14px 24px;
+      background: var(--primary-forest);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.88rem;
+      letter-spacing: 0.05em;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-card-apply:hover {
+      background: var(--accent-gold);
+      color: var(--primary-forest);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(198, 161, 91, 0.35);
+    }
+
+    /* ── 3. WHY JOIN US CARDS ── */
+    .why-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .why-card {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 20px;
+      padding: 36px;
+      transition: var(--transition-medium);
+      position: relative;
+    }
+    .why-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(198, 161, 91, 0.4);
+      box-shadow: var(--shadow-luxury);
+    }
+
+    .why-icon {
+      font-size: 2rem;
+      color: var(--accent-gold);
+      margin-bottom: 20px;
+    }
+    .why-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary-forest);
+      margin-bottom: 10px;
+    }
+    .why-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── 4. OUR PROCESS TIMELINE ── */
+    .timeline-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+    }
+    .timeline-track {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
+      gap: 20px;
+    }
+    .timeline-track::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 60px;
+      right: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-forest), var(--accent-gold), var(--secondary-olive));
+      z-index: 1;
+    }
+    .timeline-step {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      text-align: center;
+      background: transparent;
+    }
+    .step-number-node {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--bg-ivory);
+      border: 3px solid var(--accent-gold);
+      color: var(--primary-forest);
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 10px 25px rgba(18, 53, 36, 0.1);
+      transition: var(--transition-fast);
+    }
+    .timeline-step:hover .step-number-node {
+      background: var(--primary-forest);
+      color: var(--accent-gold);
+      transform: scale(1.15);
+      border-color: var(--accent-gold);
+    }
+    .step-title {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary-forest);
+      margin-bottom: 8px;
+    }
+    .step-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-track {
+        flex-direction: column;
+        gap: 36px;
+      }
+      .timeline-track::before {
+        top: 40px;
+        bottom: 40px;
+        left: 40px;
+        width: 3px;
+        height: auto;
+        right: auto;
+      }
+      .timeline-step {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        text-align: left;
+      }
+      .step-number-node {
+        margin: 0;
+        min-width: 80px;
+      }
+    }
+
+    /* ── 5. OPEN OPPORTUNITIES ── */
+    .opportunities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 30px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .opp-card {
+      background: #ffffff;
+      border-radius: 20px;
+      border: 1px solid var(--border-light);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition-medium);
+      box-shadow: var(--shadow-subtle);
+    }
+    .opp-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-luxury);
+      border-color: rgba(198, 161, 91, 0.5);
+    }
+    .opp-meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .opp-pill {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: var(--bg-beige);
+      color: var(--primary-forest);
+    }
+    .opp-pill.mode {
+      background: rgba(198, 161, 91, 0.15);
+      color: #926f25;
+    }
+    .opp-title {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary-forest);
+      margin-bottom: 16px;
+    }
+    .opp-details {
+      display: flex;
+      gap: 20px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+    .opp-details i {
+      color: var(--accent-gold);
+      margin-right: 6px;
+    }
+
+    /* ── 6. FAQ ACCORDION ── */
+    .faq-container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .faq-item {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: var(--transition-fast);
+    }
+    .faq-item.active {
+      border-color: var(--accent-gold);
+      box-shadow: 0 10px 30px rgba(18, 53, 36, 0.05);
+    }
+    .faq-question {
+      width: 100%;
+      padding: 24px 28px;
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--primary-forest);
+      cursor: pointer;
+    }
+    .faq-icon-toggle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--bg-beige);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      color: var(--primary-forest);
+      transition: var(--transition-fast);
+    }
+    .faq-item.active .faq-icon-toggle {
+      transform: rotate(180deg);
+      background: var(--primary-forest);
+      color: var(--accent-gold);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      padding: 0 28px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 250px;
+      padding: 0 28px 24px;
+    }
+
+    /* ── 7. CONTACT SECTION ("NEED HELP?") ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .contact-card {
+      background: rgba(255,255,255,0.9);
+      border: 1px solid var(--border-light);
+      border-radius: 20px;
+      padding: 32px 24px;
+      text-align: center;
+      transition: var(--transition-fast);
+    }
+    .contact-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-gold);
+      box-shadow: var(--shadow-card);
+    }
+    .contact-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--bg-beige);
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin: 0 auto 16px;
+    }
+    .contact-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--secondary-olive);
+      margin-bottom: 8px;
+    }
+    .contact-val {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--primary-forest);
+    }
+
+    /* ── 8. PREMIUM MODAL APPLICATION FORM ── */
+    .app-modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: rgba(18, 53, 36, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+    .app-modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .app-modal-container {
+      background: var(--bg-ivory);
+      width: 100%;
+      max-width: 900px;
+      max-height: 90vh;
+      border-radius: 28px;
+      border: 1px solid rgba(198, 161, 91, 0.4);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+      overflow-y: auto;
+      position: relative;
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .app-modal-overlay.active .app-modal-container {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(18, 53, 36, 0.08);
+      border: none;
+      color: var(--primary-forest);
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-fast);
+      z-index: 10;
+    }
+    .modal-close-btn:hover {
+      background: var(--primary-forest);
+      color: var(--accent-gold);
+      transform: rotate(90deg);
+    }
+
+    .modal-header {
+      padding: 44px 44px 20px;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .modal-header-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 6px;
+    }
+    .modal-header-title {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary-forest);
+    }
+
+    .modal-body {
+      padding: 36px 44px 44px;
+    }
+
+    /* Form Layout Grid */
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .form-group-full {
+      grid-column: span 2;
+    }
+    @media (max-width: 680px) {
+      .form-grid { grid-template-columns: 1fr; }
+      .form-group-full { grid-column: span 1; }
+      .modal-header, .modal-body { padding: 28px 20px; }
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary-forest);
+      margin-bottom: 8px;
+    }
+    .form-label span.req { color: #d9534f; }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 14px 18px;
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      background: #ffffff;
+      border: 1.5px solid var(--border-light);
+      border-radius: 12px;
+      color: var(--text-dark);
+      outline: none;
+      transition: var(--transition-fast);
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 0 4px rgba(198, 161, 91, 0.15);
+    }
+
+    /* Custom File Input Container */
+    .file-input-wrapper {
+      position: relative;
+      border: 2px dashed var(--border-gold);
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.6);
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+    .file-input-wrapper:hover {
+      background: #ffffff;
+      border-color: var(--accent-gold);
+    }
+    .file-input-wrapper input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+    .file-input-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .file-input-info i {
+      font-size: 1.5rem;
+      color: var(--accent-gold);
+    }
+    .file-name-preview {
+      font-weight: 600;
+      color: var(--primary-forest);
+      margin-top: 4px;
+    }
+
+    /* Radio Pills */
+    .pill-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .pill-option {
+      cursor: pointer;
+    }
+    .pill-option input[type="radio"] {
+      display: none;
+    }
+    .pill-label {
+      display: inline-block;
+      padding: 10px 18px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 20px;
+      color: var(--text-dark);
+      transition: var(--transition-fast);
+    }
+    .pill-option input[type="radio"]:checked + .pill-label {
+      background: var(--primary-forest);
+      color: var(--accent-gold);
+      border-color: var(--primary-forest);
+      box-shadow: 0 4px 12px rgba(18, 53, 36, 0.2);
+    }
+
+    /* Checkbox */
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .checkbox-group input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: var(--primary-forest);
+      margin-top: 2px;
+      cursor: pointer;
+    }
+    .checkbox-label {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Submit Button */
+    .btn-submit-form {
+      width: 100%;
+      padding: 18px 32px;
+      background: linear-gradient(135deg, var(--primary-forest) 0%, #1c4b35 100%);
+      color: #ffffff;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      transition: var(--transition-fast);
+      box-shadow: 0 10px 30px rgba(18, 53, 36, 0.25);
+    }
+    .btn-submit-form:hover {
+      background: linear-gradient(135deg, var(--accent-gold) 0%, #d4b26f 100%);
+      color: var(--primary-forest);
+      box-shadow: 0 12px 35px rgba(198, 161, 91, 0.4);
+      transform: translateY(-2px);
+    }
+
+    /* ── 9. SUCCESS POPUP ── */
+    .success-modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 10001;
+      background: rgba(18, 53, 36, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+    .success-modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .success-modal-card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 56px 44px;
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 30px 90px rgba(0,0,0,0.5);
+      transform: scale(0.85);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid var(--border-gold);
+    }
+    .success-modal-overlay.active .success-modal-card {
+      transform: scale(1);
+    }
+    .success-icon-ring {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: rgba(74, 107, 60, 0.12);
+      border: 2px solid var(--secondary-olive);
+      color: var(--secondary-olive);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      margin: 0 auto 28px;
+      animation: pulseCheck 1.5s infinite ease-in-out alternate;
+    }
+    @keyframes pulseCheck {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(74, 107, 60, 0.4); }
+      100% { transform: scale(1.08); box-shadow: 0 0 0 20px rgba(74, 107, 60, 0); }
+    }
+    .success-title {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary-forest);
+      margin-bottom: 16px;
+    }
+    .success-msg {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+    .success-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-success-home {
+      padding: 14px 28px;
+      background: var(--primary-forest);
+      color: #ffffff;
+      border-radius: 14px;
+      font-weight: 600;
+      transition: var(--transition-fast);
+    }
+    .btn-success-home:hover {
+      background: var(--accent-gold);
+      color: var(--primary-forest);
+    }
+    .btn-success-opp {
+      padding: 14px 28px;
+      background: var(--bg-beige);
+      color: var(--primary-forest);
+      border-radius: 14px;
+      font-weight: 600;
+      border: 1px solid var(--border-light);
+      transition: var(--transition-fast);
+    }
+    .btn-success-opp:hover {
+      background: var(--primary-forest);
+      color: #ffffff;
+    }
+    .btn-admin-preview {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: var(--accent-gold);
+      text-decoration: underline;
+    }
+
+    /* Floating Admin Link Button in Bottom Left */
+    .admin-float-link {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      z-index: 99;
+      background: rgba(18, 53, 36, 0.9);
+      color: var(--accent-gold);
+      border: 1px solid rgba(198, 161, 91, 0.4);
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition-fast);
+    }
+    .admin-float-link:hover {
+      background: var(--accent-gold);
+      color: var(--primary-forest);
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== PRELOADER SCREEN ==================== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <img src="images/logo.png" alt="Bal Jyoti Logo" class="preloader-logo">
+      <div class="preloader-bar-container">
+        <div class="preloader-bar-fill" id="preloader-bar-fill"></div>
+      </div>
+      <span class="preloader-text">BAL JYOTI FOUNDATION</span>
+    </div>
+  </div>
+
+  <!-- ==================== SCROLL PROGRESS INDICATOR ==================== -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+  </div>
+
+  <!-- ==================== CUSTOM MOUSE CURSOR ==================== -->
+  <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
+  <div class="custom-cursor-circle" id="custom-cursor-circle"></div>
+
+  <!-- ==================== HEADER / NAVIGATION ==================== -->
+  <header class="main-header" id="main-header">
+    <div class="nav-container">
+      <!-- Logo Left -->
+      <a href="index.html" class="logo-wrapper hover-target" id="logo-link" aria-label="Bal Jyoti Foundation Home">
+        <img src="images/logo.png" alt="Bal Jyoti Foundation Logo" class="logo-img">
+        <span class="logo-text">BAL JYOTI<br><span class="logo-subtext">FOUNDATION</span></span>
+      </a>
+
+      <!-- Menu Center -->
+      <nav class="nav-menu-wrapper" id="nav-menu-wrapper" aria-label="Main navigation">
+        <ul class="nav-menu" role="menubar" aria-label="Site menu">
+          <li role="none"><a href="index.html" class="nav-link hover-target" role="menuitem">Home</a></li>
+          <li role="none"><a href="about.html" class="nav-link hover-target" role="menuitem">About</a></li>
+          <li role="none"><a href="index.html#programs" class="nav-link hover-target" role="menuitem">Programs</a></li>
+          <li role="none"><a href="gallery.html" class="nav-link hover-target" role="menuitem">Gallery</a></li>
+          <li role="none"><a href="join.html" class="nav-link active hover-target" role="menuitem">Join Us</a></li>
+          <li role="none"><a href="donate.html" class="nav-link hover-target" role="menuitem">Donate</a></li>
+          <li role="none"><a href="index.html#contact" class="nav-link hover-target" role="menuitem">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Donate Button Right -->
+      <div class="nav-actions">
+        <a href="donate.html" class="btn-donate-nav ripple hover-target" id="donate-nav-btn">
+          <span>Donate Now</span>
+        </a>
+        
+        <!-- Mobile Menu Trigger -->
+        <button class="mobile-nav-toggle hover-target" id="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Mobile Navigation Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+    <div class="mobile-menu-inner">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-link hover-target">Home</a></li>
+        <li><a href="about.html" class="mobile-link hover-target">About</a></li>
+        <li><a href="index.html#programs" class="mobile-link hover-target">Programs</a></li>
+        <li><a href="gallery.html" class="mobile-link hover-target">Gallery</a></li>
+        <li><a href="join.html" class="mobile-link hover-target">Join Us</a></li>
+        <li><a href="donate.html" class="mobile-link hover-target">Donate</a></li>
+        <li><a href="index.html#contact" class="mobile-link hover-target">Contact</a></li>
+      </ul>
+      <a href="donate.html" class="mobile-menu-donate-btn ripple hover-target">Donate Now</a>
+    </div>
+  </div>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="join-hero" id="join-hero">
+    <img src="images/hero_community_training.jpg" alt="Bal Jyoti Rural Mission" class="join-hero-bg">
+    <div class="join-hero-overlay"></div>
+    <div class="join-hero-content">
+      <!-- Breadcrumb -->
+      <nav class="join-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html" class="hover-target">Home</a>
+        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+        <span>Get Involved</span>
+        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+        <span style="color: #ffffff;">Join Us</span>
+      </nav>
+
+      <h1 class="join-hero-title">Join Our <span>Mission</span></h1>
+      <p class="join-hero-subtitle">
+        Become a part of Bal Jyoti Foundation and help create sustainable livelihoods, empower rural communities, preserve traditional crafts, and build a better future.
+      </p>
+
+      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <button class="btn-card-apply hover-target open-app-modal-btn" data-role="Internship" style="width: auto; padding: 16px 36px; font-size: 1rem;">
+          <i class="fa-solid fa-paper-plane"></i> Apply Now
+        </button>
+        <a href="#application-types" class="btn-success-opp hover-target" style="padding: 16px 36px; border-radius: 14px; text-decoration: none;">
+          Explore Opportunities
+        </a>
+      </div>
+    </div>
+
+    <!-- Animated Scroll Indicator -->
+    <div class="hero-scroll-indicator" onclick="document.getElementById('application-types').scrollIntoView({behavior: 'smooth'})">
+      <span class="hero-scroll-text">Scroll to explore</span>
+      <div class="mouse-icon">
+        <div class="mouse-wheel"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== APPLICATION TYPES SECTION ==================== -->
+  <section class="join-section join-section-bg-alt" id="application-types">
+    <div class="section-header-center">
+      <span class="section-eyebrow">OPPORTUNITIES FOR EVERYONE</span>
+      <h2 class="section-title">Application Pathways</h2>
+      <p class="section-subtitle">
+        Choose your engagement model and contribute your skills to empowering rural artisans across Bihar & Jharkhand.
+      </p>
+    </div>
+
+    <div class="app-types-grid">
+      <!-- 1. Internship -->
+      <div class="app-card hover-target">
+        <span class="app-card-badge">1 - 6 Months</span>
+        <div class="app-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h3 class="app-card-title">Internship</h3>
+        <p class="app-card-desc">
+          Gain hands-on field experience in craft revival, community research, web technologies, design, and social sector management.
+        </p>
+        <button class="btn-card-apply open-app-modal-btn" data-role="Intern" data-dept="Education">
+          Apply Now <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- 2. Trainee -->
+      <div class="app-card hover-target">
+        <span class="app-card-badge">3 - 12 Months</span>
+        <div class="app-card-icon"><i class="fa-solid fa-seedling"></i></div>
+        <h3 class="app-card-title">Trainee</h3>
+        <p class="app-card-desc">
+          Specialized apprenticeship in bamboo joinery, natural dyeing, rug designing, stitching, and artisan enterprise operations.
+        </p>
+        <button class="btn-card-apply open-app-modal-btn" data-role="Trainee" data-dept="Bamboo">
+          Apply Now <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- 3. Volunteer -->
+      <div class="app-card hover-target">
+        <span class="app-card-badge">Flexible Hours</span>
+        <div class="app-card-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+        <h3 class="app-card-title">Volunteer</h3>
+        <p class="app-card-desc">
+          Share your time, mentor village children, conduct photography workshops, or support local health & literacy initiatives.
+        </p>
+        <button class="btn-card-apply open-app-modal-btn" data-role="Volunteer" data-dept="Women Empowerment">
+          Apply Now <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- 4. Full-Time Job -->
+      <div class="app-card hover-target">
+        <span class="app-card-badge">Full-Time Career</span>
+        <div class="app-card-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <h3 class="app-card-title">Full-Time Job</h3>
+        <p class="app-card-desc">
+          Build a rewarding career as a program lead, field coordinator, craft master, design director, or technology specialist.
+        </p>
+        <button class="btn-card-apply open-app-modal-btn" data-role="Employee" data-dept="Administration">
+          Apply Now <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- 5. Partner With Us -->
+      <div class="app-card hover-target">
+        <span class="app-card-badge">Institutional</span>
+        <div class="app-card-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+        <h3 class="app-card-title">Partner With Us</h3>
+        <p class="app-card-desc">
+          Collaborate as a CSR partner, academic institution, retail distributor, or NGO network to scale grassroots impact together.
+        </p>
+        <button class="btn-card-apply open-app-modal-btn" data-role="Partner" data-dept="Eco Tourism">
+          Apply Now <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== WHY JOIN US SECTION ==================== -->
+  <section class="join-section" id="why-join-us">
+    <div class="section-header-center">
+      <span class="section-eyebrow">THE BAL JYOTI EXPERIENCE</span>
+      <h2 class="section-title">Why Join Us</h2>
+      <p class="section-subtitle">
+        Empowering communities begins with empowering our people. Here is what you gain by working with us.
+      </p>
+    </div>
+
+    <div class="why-cards-grid">
+      <div class="why-card hover-target">
+        <div class="why-icon"><i class="fa-solid fa-award"></i></div>
+        <h3 class="why-title">Learn From Experts</h3>
+        <p class="why-desc">Direct mentorship from master craftspeople, veteran social entrepreneurs, and heritage conservationists.</p>
+      </div>
+
+      <div class="why-card hover-target">
+        <div class="why-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+        <h3 class="why-title">Real Field Experience</h3>
+        <p class="why-desc">Immerse yourself in authentic village clusters across Bodhgaya, Gaya, and neighboring rural regions.</p>
+      </div>
+
+      <div class="why-card hover-target">
+        <div class="why-icon"><i class="fa-solid fa-certificate"></i></div>
+        <h3 class="why-title">Certificate & Recommendation</h3>
+        <p class="why-desc">Receive formal certification, detailed performance evaluation, and glowing job references upon completion.</p>
+      </div>
+
+      <div class="why-card hover-target">
+        <div class="why-icon"><i class="fa-solid fa-people-group"></i></div>
+        <h3 class="why-title">Community Impact</h3>
+        <p class="why-desc">Directly contribute to sustainable livelihoods, rural women financial independence, and child education.</p>
+      </div>
+
+      <div class="why-card hover-target">
+        <div class="why-icon"><i class="fa-solid fa-bolt"></i></div>
+        <h3 class="why-title">Skill Development</h3>
+        <p class="why-desc">Master project management, craft design innovation, digital story-telling, and eco-friendly manufacturing.</p>
+      </div>
+
+      <div class="why-card hover-target">
+        <div class="why-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3 class="why-title">Career Growth</h3>
+        <p class="why-desc">Fast-track your professional journey into leading global NGOs, social enterprises, and design studios.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== OUR PROCESS TIMELINE ==================== -->
+  <section class="join-section join-section-bg-alt" id="our-process">
+    <div class="section-header-center">
+      <span class="section-eyebrow">TRANSPARENT JOURNEY</span>
+      <h2 class="section-title">Our Selection Process</h2>
+      <p class="section-subtitle">
+        Five simple steps from your online application to stepping foot into our artisan communities.
+      </p>
+    </div>
+
+    <div class="timeline-wrapper">
+      <div class="timeline-track">
+        <!-- Step 1 -->
+        <div class="timeline-step hover-target">
+          <div class="step-number-node">01</div>
+          <h4 class="step-title">Submit Application</h4>
+          <p class="step-desc">Fill out the form with your preferences & resume.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-step hover-target">
+          <div class="step-number-node">02</div>
+          <h4 class="step-title">Application Review</h4>
+          <p class="step-desc">Our team reviews your profile within 3-5 days.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-step hover-target">
+          <div class="step-number-node">03</div>
+          <h4 class="step-title">Interview / Discussion</h4>
+          <p class="step-desc">Friendly interaction to understand mutual alignment.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-step hover-target">
+          <div class="step-number-node">04</div>
+          <h4 class="step-title">Selection</h4>
+          <p class="step-desc">Receive formal invitation letter & onboarding guide.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="timeline-step hover-target">
+          <div class="step-number-node">05</div>
+          <h4 class="step-title">Welcome to Bal Jyoti</h4>
+          <p class="step-desc">Start your inspiring journey with our foundation family!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- ==================== FAQ SECTION ==================== -->
+  <section class="join-section join-section-bg-alt" id="faq">
+    <div class="section-header-center">
+      <span class="section-eyebrow">COMMON QUESTIONS</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">
+        Everything you need to know about joining Bal Jyoti Foundation.
+      </p>
+    </div>
+
+    <div class="faq-container">
+      <div class="faq-item active hover-target">
+        <button class="faq-question">
+          <span>Who can apply?</span>
+          <div class="faq-icon-toggle"><i class="fa-solid fa-chevron-down"></i></div>
+        </button>
+        <div class="faq-answer">
+          Anyone with enthusiasm and commitment! We welcome students, fresh graduates, working professionals, retired individuals, craft enthusiasts, and international volunteers regardless of background.
+        </div>
+      </div>
+
+      <div class="faq-item hover-target">
+        <button class="faq-question">
+          <span>Will I receive a certificate?</span>
+          <div class="faq-icon-toggle"><i class="fa-solid fa-chevron-down"></i></div>
+        </button>
+        <div class="faq-answer">
+          Yes! All candidates who complete their internship, training, or volunteer tenure receive an official ISO-aligned Certificate of Completion along with a personalized Letter of Recommendation.
+        </div>
+      </div>
+
+      <div class="faq-item hover-target">
+        <button class="faq-question">
+          <span>Is accommodation available?</span>
+          <div class="faq-icon-toggle"><i class="fa-solid fa-chevron-down"></i></div>
+        </button>
+        <div class="faq-answer">
+          For field-based positions in Bodhgaya and rural craft hubs, safe and clean accommodation at our partner guesthouses can be arranged upon request.
+        </div>
+      </div>
+
+      <div class="faq-item hover-target">
+        <button class="faq-question">
+          <span>Is the internship paid?</span>
+          <div class="faq-icon-toggle"><i class="fa-solid fa-chevron-down"></i></div>
+        </button>
+        <div class="faq-answer">
+          Select full-time roles, fellowships, and specialized technical internships offer monthly stipends. Standard volunteer positions are self-funded or project-supported.
+        </div>
+      </div>
+
+      <div class="faq-item hover-target">
+        <button class="faq-question">
+          <span>How long does selection take?</span>
+          <div class="faq-icon-toggle"><i class="fa-solid fa-chevron-down"></i></div>
+        </button>
+        <div class="faq-answer">
+          Applications are reviewed on a rolling basis. You will typically hear back from our HR panel within 3 to 7 business days for an initial interaction.
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== CONTACT SECTION ("NEED HELP?") ==================== -->
+  <section class="join-section" id="contact-help">
+    <div class="section-header-center">
+      <span class="section-eyebrow">WE ARE HERE FOR YOU</span>
+      <h2 class="section-title">Need Help?</h2>
+      <p class="section-subtitle">
+        Have specific questions regarding applications or institutional partnerships? Reach out directly.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card hover-target">
+        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+        <div class="contact-label">Phone Support</div>
+        <div class="contact-val">+91 12345 67890</div>
+      </div>
+
+      <div class="contact-card hover-target">
+        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div class="contact-label">Email Us</div>
+        <div class="contact-val">careers@baljyoti.org</div>
+      </div>
+
+      <div class="contact-card hover-target">
+        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="contact-label">Office Address</div>
+        <div class="contact-val">Bodhgaya, Bihar, India</div>
+      </div>
+
+      <div class="contact-card hover-target">
+        <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+        <div class="contact-label">Working Hours</div>
+        <div class="contact-val">Mon - Sat: 9 AM - 6 PM</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== APPLICATION FORM MODAL ==================== -->
+  <div class="app-modal-overlay" id="appModalOverlay">
+    <div class="app-modal-container">
+      <button class="modal-close-btn" id="closeAppModalBtn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-header-eyebrow">BAL JYOTI APPLICATION</div>
+        <h2 class="modal-header-title" id="modalHeaderTitle">Submit Your Application</h2>
+      </div>
+
+      <div class="modal-body">
+        <form id="balJyotiApplicationForm" novalidate>
+          <div class="form-grid">
+
+            <!-- Full Name -->
+            <div>
+              <label class="form-label" for="fullName">Full Name <span class="req">*</span></label>
+              <input type="text" id="fullName" name="fullName" class="form-input" placeholder="e.g. Ananya Sharma" required>
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label class="form-label" for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="e.g. ananya@example.com" required>
+            </div>
+
+            <!-- Phone -->
+            <div>
+              <label class="form-label" for="phone">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="+91 98765 43210" required>
+            </div>
+
+            <!-- Date of Birth -->
+            <div>
+              <label class="form-label" for="dob">Date of Birth <span class="req">*</span></label>
+              <input type="date" id="dob" name="dob" class="form-input" required>
+            </div>
+
+            <!-- Gender -->
+            <div>
+              <label class="form-label" for="gender">Gender <span class="req">*</span></label>
+              <select id="gender" name="gender" class="form-select" required>
+                <option value="">Select Gender</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Non-Binary">Non-Binary</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+              </select>
+            </div>
+
+            <!-- City -->
+            <div>
+              <label class="form-label" for="city">City <span class="req">*</span></label>
+              <input type="text" id="city" name="city" class="form-input" placeholder="e.g. Patna" required>
+            </div>
+
+            <!-- State -->
+            <div>
+              <label class="form-label" for="state">State <span class="req">*</span></label>
+              <input type="text" id="state" name="state" class="form-input" placeholder="e.g. Bihar" required>
+            </div>
+
+            <!-- Country -->
+            <div>
+              <label class="form-label" for="country">Country <span class="req">*</span></label>
+              <input type="text" id="country" name="country" class="form-input" value="India" required>
+            </div>
+
+            <!-- Qualification -->
+            <div>
+              <label class="form-label" for="qualification">Qualification <span class="req">*</span></label>
+              <select id="qualification" name="qualification" class="form-select" required>
+                <option value="">Select Highest Qualification</option>
+                <option value="High School">High School / 12th</option>
+                <option value="Diploma">Diploma</option>
+                <option value="Bachelor's Degree">Bachelor's Degree</option>
+                <option value="Master's Degree">Master's Degree</option>
+                <option value="Doctorate">Doctorate</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <!-- Current College / Company -->
+            <div>
+              <label class="form-label" for="currentCollegeCompany">Current College / Company</label>
+              <input type="text" id="currentCollegeCompany" name="currentCollegeCompany" class="form-input" placeholder="e.g. NIFT / TCS / Student">
+            </div>
+
+            <!-- Course / Degree -->
+            <div>
+              <label class="form-label" for="courseDegree">Course / Degree</label>
+              <input type="text" id="courseDegree" name="courseDegree" class="form-input" placeholder="e.g. B.Des / B.Tech / MSW">
+            </div>
+
+            <!-- Experience -->
+            <div>
+              <label class="form-label" for="experience">Experience (Optional)</label>
+              <select id="experience" name="experience" class="form-select">
+                <option value="Fresh / No Experience">Fresh / No Experience</option>
+                <option value="0 - 1 Year">0 - 1 Year</option>
+                <option value="1 - 3 Years">1 - 3 Years</option>
+                <option value="3 - 5 Years">3 - 5 Years</option>
+                <option value="5+ Years">5+ Years</option>
+              </select>
+            </div>
+
+            <!-- Skills -->
+            <div class="form-group-full">
+              <label class="form-label" for="skills">Key Skills <span class="req">*</span></label>
+              <input type="text" id="skills" name="skills" class="form-input" placeholder="e.g. Weaving, UI/UX Design, Social Work, Teaching, React" required>
+            </div>
+
+            <!-- Preferred Role -->
+            <div class="form-group-full">
+              <label class="form-label">Preferred Role <span class="req">*</span></label>
+              <div class="pill-group">
+                <label class="pill-option">
+                  <input type="radio" name="preferredRole" value="Intern" checked>
+                  <span class="pill-label">Intern</span>
+                </label>
+                <label class="pill-option">
+                  <input type="radio" name="preferredRole" value="Trainee">
+                  <span class="pill-label">Trainee</span>
+                </label>
+                <label class="pill-option">
+                  <input type="radio" name="preferredRole" value="Volunteer">
+                  <span class="pill-label">Volunteer</span>
+                </label>
+                <label class="pill-option">
+                  <input type="radio" name="preferredRole" value="Employee">
+                  <span class="pill-label">Employee</span>
+                </label>
+                <label class="pill-option">
+                  <input type="radio" name="preferredRole" value="Partner">
+                  <span class="pill-label">Partner</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Department -->
+            <div>
+              <label class="form-label" for="department">Department <span class="req">*</span></label>
+              <select id="department" name="department" class="form-select" required>
+                <option value="Education">Education</option>
+                <option value="Women Empowerment">Women Empowerment</option>
+                <option value="Rugs">Rugs</option>
+                <option value="Bamboo">Bamboo</option>
+                <option value="Basketry">Basketry</option>
+                <option value="Stitching">Stitching</option>
+                <option value="Eco Tourism">Eco Tourism</option>
+                <option value="Administration">Administration</option>
+                <option value="Marketing">Marketing</option>
+                <option value="IT">IT</option>
+              </select>
+            </div>
+
+            <!-- Duration -->
+            <div>
+              <label class="form-label" for="duration">Duration <span class="req">*</span></label>
+              <select id="duration" name="duration" class="form-select" required>
+                <option value="1 Month">1 Month</option>
+                <option value="2 Months">2 Months</option>
+                <option value="3 Months" selected>3 Months</option>
+                <option value="6 Months">6 Months</option>
+                <option value="1 Year">1 Year</option>
+              </select>
+            </div>
+
+            <!-- Available From -->
+            <div class="form-group-full">
+              <label class="form-label" for="availableFrom">Available From <span class="req">*</span></label>
+              <input type="date" id="availableFrom" name="availableFrom" class="form-input" required>
+            </div>
+
+            <!-- Resume Upload (PDF) -->
+            <div class="form-group-full">
+              <label class="form-label">Resume Upload (PDF) <span class="req">*</span></label>
+              <div class="file-input-wrapper">
+                <input type="file" id="resumeFile" name="resumeFile" accept=".pdf" required>
+                <div class="file-input-info">
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                  <span>Click or Drag & Drop PDF Resume here</span>
+                  <div class="file-name-preview" id="resumeFileNameDisplay">No file selected (Max: 10MB)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Upload (Optional) -->
+            <div>
+              <label class="form-label">Portfolio Upload (Optional)</label>
+              <div class="file-input-wrapper" style="padding: 14px;">
+                <input type="file" id="portfolioFile" name="portfolioFile" accept=".pdf,.zip,.jpg,.png">
+                <div class="file-input-info">
+                  <i class="fa-solid fa-paperclip" style="font-size: 1.1rem;"></i>
+                  <span>Upload Portfolio (PDF / Zip / Images)</span>
+                  <div class="file-name-preview" id="portfolioFileNameDisplay"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Profile Photo -->
+            <div>
+              <label class="form-label">Profile Photo (Optional)</label>
+              <div class="file-input-wrapper" style="padding: 14px;">
+                <input type="file" id="photoFile" name="photoFile" accept="image/*">
+                <div class="file-input-info">
+                  <i class="fa-solid fa-user" style="font-size: 1.1rem;"></i>
+                  <span>Upload Profile Image</span>
+                  <div class="file-name-preview" id="photoFileNameDisplay"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Why join us -->
+            <div class="form-group-full">
+              <label class="form-label" for="whyJoin">Why do you want to join Bal Jyoti Foundation? <span class="req">*</span></label>
+              <textarea id="whyJoin" name="whyJoin" rows="4" class="form-textarea" placeholder="Describe your motivation and personal alignment with our mission..." required></textarea>
+            </div>
+
+            <!-- Contribution -->
+            <div class="form-group-full">
+              <label class="form-label" for="contribution">How can you contribute? <span class="req">*</span></label>
+              <textarea id="contribution" name="contribution" rows="4" class="form-textarea" placeholder="Highlight your skills, past projects, or unique perspective you bring..." required></textarea>
+            </div>
+
+            <!-- Declaration -->
+            <div class="form-group-full">
+              <div class="checkbox-group">
+                <input type="checkbox" id="declaration" name="declaration" required>
+                <label for="declaration" class="checkbox-label">
+                  I hereby declare that all information provided in this application is accurate and complete to the best of my knowledge. <span class="req">*</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group-full" style="margin-top: 10px;">
+              <button type="submit" class="btn-submit-form hover-target" id="submitAppBtn">
+                <span>Submit Application</span> <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== AFTER SUBMISSION SUCCESS POPUP ==================== -->
+  <div class="success-modal-overlay" id="successModalOverlay">
+    <div class="success-modal-card">
+      <div class="success-icon-ring">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <h2 class="success-title">Application Submitted!</h2>
+      <p class="success-msg">
+        Thank you for applying to Bal Jyoti Foundation.<br><br>
+        We have received your application successfully.<br>
+        Our team will review your application and contact you shortly.
+      </p>
+      <div class="success-actions">
+        <a href="index.html" class="btn-success-home hover-target">Return Home</a>
+        <button class="btn-success-opp hover-target" id="closeSuccessViewOppBtn">View Opportunities</button>
+      </div>
+      <div>
+        <a href="admin/index.html" target="_blank" class="btn-admin-preview"><i class="fa-solid fa-shield-halved"></i> Open Admin Portal to View Application</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Floating Admin Button -->
+  <a href="admin/index.html" class="admin-float-link hover-target" title="Admin Applications Dashboard">
+    <i class="fa-solid fa-user-gear"></i> Admin Dashboard
+  </a>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="main-footer" id="contact">
+    <div class="section-container">
+      <div class="footer-grid">
+        <!-- Column 1: Info -->
+        <div class="footer-col brand-col">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="Bal Jyoti Foundation Logo" class="footer-logo-img">
+            <span class="logo-text">BAL JYOTI<br><span class="logo-subtext">FOUNDATION</span></span>
+          </div>
+          <p class="footer-desc">
+            Empowering rural India through heritage preservation, education, sustainable livelihoods, and community development.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn Profile" class="hover-target"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram Profile" class="hover-target"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.pinterest.com" target="_blank" rel="noopener" aria-label="Pinterest Board" class="hover-target"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube Channel" class="hover-target"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col links-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="hover-target">Home</a></li>
+            <li><a href="about.html" class="hover-target">About Us</a></li>
+            <li><a href="index.html#programs" class="hover-target">Programs</a></li>
+            <li><a href="gallery.html" class="hover-target">Gallery</a></li>
+            <li><a href="join.html" class="hover-target">Join Us</a></li>
+            <li><a href="donate.html" class="hover-target">Donate</a></li>
+            <li><a href="admin/index.html" class="hover-target">Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Programs Links -->
+        <div class="footer-col links-col">
+          <h3>Our Programs</h3>
+          <ul class="footer-links">
+            <li><a href="bamboo.html" class="hover-target">Bamboo Craft</a></li>
+            <li><a href="rugs.html" class="hover-target">Handmade Rugs</a></li>
+            <li><a href="women-empowerment.html" class="hover-target">Women Empowerment</a></li>
+            <li><a href="education.html" class="hover-target">Education</a></li>
+            <li><a href="eco-tourism.html" class="hover-target">Eco Tourism</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Get in Touch -->
+        <div class="footer-col contact-col">
+          <h3>Get In Touch</h3>
+          <p class="contact-info-item">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Bodhgaya, Bihar, India</span>
+          </p>
+          <p class="contact-info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@baljyotifoundation.org" class="hover-target">info@baljyotifoundation.org</a>
+          </p>
+          <p class="contact-info-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 12345 67890</span>
+          </p>
+          <p class="contact-info-item">
+            <i class="fa-solid fa-clock"></i>
+            <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
+          </p>
+        </div>
+
+        <!-- Column 5: Newsletter -->
+        <div class="footer-col newsletter-col">
+          <h3>Newsletter</h3>
+          <p class="newsletter-sub-text">Stay updated with our latest news and stories.</p>
+          <form class="newsletter-form" id="newsletter-form" novalidate>
+            <label for="newsletter-email" class="sr-only">Enter your email address to subscribe</label>
+            <input type="email" id="newsletter-email" placeholder="Enter your email" required autocomplete="email">
+            <button type="submit" aria-label="Subscribe to newsletter" class="hover-target"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+          </form>
+          <div class="newsletter-feedback" id="newsletter-feedback" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Bal Jyoti Foundation. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="hover-target">Privacy Policy</a>
+          <a href="#" class="hover-target">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CORE LIBRARIES (Lenis, GSAP, ScrollTrigger) ==================== -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script src="script.js"></script>
+
+  <!-- ==================== PAGE LOGIC ==================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. FAQ Accordion Logic
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-question');
+        btn.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          faqItems.forEach(fi => fi.classList.remove('active'));
+          if (!isActive) item.classList.add('active');
+        });
+      });
+
+      // 2. Application Modal Open / Close Logic
+      const modalOverlay = document.getElementById('appModalOverlay');
+      const closeBtn = document.getElementById('closeAppModalBtn');
+      const openBtns = document.querySelectorAll('.open-app-modal-btn');
+      const modalHeaderTitle = document.getElementById('modalHeaderTitle');
+      const appForm = document.getElementById('balJyotiApplicationForm');
+
+      openBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const role = btn.dataset.role || 'Intern';
+          const dept = btn.dataset.dept || 'Education';
+          const pos = btn.dataset.position || '';
+
+          if (pos) {
+            modalHeaderTitle.textContent = `Apply for ${pos}`;
+          } else {
+            modalHeaderTitle.textContent = `Apply as ${role}`;
+          }
+
+          // Pre-select Role radio if available
+          const roleRadio = appForm.querySelector(`input[name="preferredRole"][value="${role}"]`);
+          if (roleRadio) roleRadio.checked = true;
+
+          // Pre-select Department if available
+          const deptSelect = appForm.querySelector('#department');
+          if (deptSelect && dept) deptSelect.value = dept;
+
+          // Set default date to today
+          const availDate = appForm.querySelector('#availableFrom');
+          if (availDate && !availDate.value) {
+            availDate.value = new Date().toISOString().split('T')[0];
+          }
+
+          modalOverlay.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      closeBtn.addEventListener('click', () => {
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) {
+          modalOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      // 3. File Input Display Previews
+      const setupFilePreview = (inputId, displayId) => {
+        const input = document.getElementById(inputId);
+        const display = document.getElementById(displayId);
+        if (!input || !display) return;
+        input.addEventListener('change', () => {
+          if (input.files && input.files[0]) {
+            display.textContent = `Selected: ${input.files[0].name} (${(input.files[0].size / 1024 / 1024).toFixed(2)} MB)`;
+          } else {
+            display.textContent = '';
+          }
+        });
+      };
+      setupFilePreview('resumeFile', 'resumeFileNameDisplay');
+      setupFilePreview('portfolioFile', 'portfolioFileNameDisplay');
+      setupFilePreview('photoFile', 'photoFileNameDisplay');
+
+      // 4. Form Submit Handler & Storage Sync
+      const successOverlay = document.getElementById('successModalOverlay');
+      const closeSuccessViewOppBtn = document.getElementById('closeSuccessViewOppBtn');
+      const submitAppBtn = document.getElementById('submitAppBtn');
+
+      appForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        if (!appForm.checkValidity()) {
+          appForm.reportValidity();
+          return;
+        }
+
+        submitAppBtn.disabled = true;
+        submitAppBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Submitting...`;
+
+        const formData = new FormData(appForm);
+        const appObj = {
+          id: 'APP-' + Date.now(),
+          fullName: formData.get('fullName'),
+          email: formData.get('email'),
+          phone: formData.get('phone'),
+          dob: formData.get('dob'),
+          gender: formData.get('gender'),
+          city: formData.get('city'),
+          state: formData.get('state'),
+          country: formData.get('country'),
+          qualification: formData.get('qualification'),
+          currentCollegeCompany: formData.get('currentCollegeCompany') || '',
+          courseDegree: formData.get('courseDegree') || '',
+          skills: formData.get('skills'),
+          experience: formData.get('experience') || 'Fresh / No Experience',
+          preferredRole: formData.get('preferredRole'),
+          department: formData.get('department'),
+          duration: formData.get('duration'),
+          availableFrom: formData.get('availableFrom'),
+          whyJoin: formData.get('whyJoin'),
+          contribution: formData.get('contribution'),
+          declaration: formData.get('declaration') ? true : false,
+          resumeFileName: document.getElementById('resumeFile').files[0]?.name || 'resume.pdf',
+          status: 'Pending',
+          createdAt: new Date().toISOString()
+        };
+
+        // Save to Client LocalStorage
+        try {
+          const existingApps = JSON.parse(localStorage.getItem('baljyoti_applications') || '[]');
+          existingApps.unshift(appObj);
+          localStorage.setItem('baljyoti_applications', JSON.stringify(existingApps));
+        } catch (err) {
+          console.error('LocalStorage error:', err);
+        }
+
+        // Attempt POST to Express REST API endpoint
+        try {
+          await fetch('/api/v1/applications', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(appObj)
+          });
+        } catch (apiErr) {
+          console.log('API Endpoint offline, saved to localStorage');
+        }
+
+        // Close Application Modal & Open Success Modal
+        setTimeout(() => {
+          submitAppBtn.disabled = false;
+          submitAppBtn.innerHTML = `<span>Submit Application</span> <i class="fa-solid fa-paper-plane"></i>`;
+          appForm.reset();
+          document.getElementById('resumeFileNameDisplay').textContent = '';
+          modalOverlay.classList.remove('active');
+          successOverlay.classList.add('active');
+        }, 600);
+      });
+
+      closeSuccessViewOppBtn.addEventListener('click', () => {
+        successOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        document.getElementById('open-opportunities').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+  <script src="cms-render.js"></script>
+</body>
+</html>

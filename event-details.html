@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Details | Bal Jyoti Foundation</title>
+  
+  <!-- Dynamic Meta Tags (Fallback) -->
+  <meta name="description" content="Discover upcoming community events, workshops, and sustainable initiatives by Bal Jyoti Foundation.">
+  <meta name="keywords" content="Bal Jyoti Foundation, events, Bodhgaya workshops, craft training">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://baljyoti.org/event-details.html">
+  <meta property="og:title" content="Event Details | Bal Jyoti Foundation">
+  <meta property="og:description" content="Join Bal Jyoti Foundation in empowering rural artisans through workshops, cultural exhibitions, and sustainable craft initiatives.">
+  <meta property="og:image" content="https://baljyoti.org/images/hero_handloom_weaving.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://baljyoti.org/event-details.html">
+  <meta name="twitter:title" content="Event Details | Bal Jyoti Foundation">
+  <meta name="twitter:description" content="Join Bal Jyoti Foundation in empowering rural artisans through workshops, cultural exhibitions, and sustainable craft initiatives.">
+  <meta name="twitter:image" content="https://baljyoti.org/images/hero_handloom_weaving.jpg">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://baljyoti.org/event-details.html">
+
+</head>
+<body class="editorial-sub-page">
+
+  <!-- ==================== PRELOADER SCREEN ==================== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <img src="images/logo.png" alt="Bal Jyoti Logo" class="preloader-logo">
+      <div class="preloader-bar-container">
+        <div class="preloader-bar-fill" id="preloader-bar-fill"></div>
+      </div>
+      <span class="preloader-text">BAL JYOTI FOUNDATION</span>
+    </div>
+  </div>
+
+  <!-- ==================== SCROLL PROGRESS INDICATOR ==================== -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+  </div>
+
+  <!-- ==================== CUSTOM MOUSE CURSOR ==================== -->
+  <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
+  <div class="custom-cursor-circle" id="custom-cursor-circle"></div>
+
+  <!-- ==================== HEADER / NAVIGATION ==================== -->
+  <header class="main-header" id="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo-wrapper hover-target" id="logo-link">
+        <img src="images/logo.png" alt="Bal Jyoti Logo" class="logo-img">
+        <span class="logo-text">BAL JYOTI<br><span class="logo-subtext">FOUNDATION</span></span>
+      </a>
+
+      <nav class="nav-menu-wrapper" id="nav-menu-wrapper">
+        <ul class="nav-menu" role="menubar">
+          <li role="none"><a href="index.html" class="nav-link hover-target" role="menuitem">Home</a></li>
+          <li role="none"><a href="about.html" class="nav-link hover-target" role="menuitem">About</a></li>
+          <li role="none"><a href="index.html#programs" class="nav-link hover-target" role="menuitem">Programs</a></li>
+          <li role="none"><a href="index.html#impact" class="nav-link hover-target" role="menuitem">Impact</a></li>
+          <li role="none"><a href="index.html#gallery" class="nav-link hover-target" role="menuitem">Gallery</a></li>
+          <li role="none"><a href="index.html#events" class="nav-link active hover-target" role="menuitem">Events</a></li>
+          <li role="none"><a href="index.html#donation" class="nav-link hover-target" role="menuitem">Volunteer</a></li>
+          <li role="none"><a href="index.html#contact" class="nav-link hover-target" role="menuitem">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html#donation" class="btn-donate-nav ripple hover-target">
+          <span>Donate Now</span>
+        </a>
+        <button class="mobile-nav-toggle hover-target" id="mobile-nav-toggle" aria-label="Toggle Menu">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+    <div class="mobile-menu-inner">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-link hover-target">Home</a></li>
+        <li><a href="about.html" class="mobile-link hover-target">About</a></li>
+        <li><a href="index.html#programs" class="mobile-link hover-target">Programs</a></li>
+        <li><a href="index.html#impact" class="mobile-link hover-target">Impact</a></li>
+        <li><a href="index.html#gallery" class="mobile-link hover-target">Gallery</a></li>
+        <li><a href="index.html#events" class="mobile-link hover-target">Events</a></li>
+        <li><a href="index.html#donation" class="mobile-link hover-target">Volunteer</a></li>
+        <li><a href="index.html#contact" class="mobile-link hover-target">Contact</a></li>
+      </ul>
+      <a href="index.html#donation" class="mobile-menu-donate-btn ripple hover-target">Donate Now</a>
+    </div>
+  </div>
+
+  <!-- ==================== HERO BANNER ==================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-parallax" id="details-hero-bg"></div>
+    <div class="hero-content-wrapper">
+      <div class="hero-content">
+        <span class="hero-eyebrow reveal-text" id="details-event-category">EVENT DETAILS</span>
+        <h1 class="hero-title reveal-text-large" id="details-event-title">Loading Event...</h1>
+        <p class="hero-subtitle reveal-text" id="details-event-subtitle">Please wait while we fetch the event details.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BREADCRUMBS & MAIN DETAILS ==================== -->
+  <section class="editorial-detail-section" id="details">
+    <div class="section-container">
+      
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-nav reveal-up" aria-label="breadcrumb">
+        <span class="breadcrumbs-text" id="details-breadcrumbs">Home > Events > Loading...</span>
+      </nav>
+
+      <div class="editorial-grid">
+        <!-- Content Block Left -->
+        <div class="editorial-text-col reveal-up">
+          <div class="main-event-img-frame" style="border-radius: 16px; overflow: hidden; margin-bottom: 35px; border: 1px solid var(--border-gold);">
+            <img id="details-main-img" src="" alt="Event banner" style="width: 100%; height: auto; display: block; object-fit: cover;">
+          </div>
+          
+          <h2 class="playfair" style="font-size: 2.2rem; color: var(--primary-forest); margin-bottom: 20px;">About the Event</h2>
+          <p class="editorial-p highlight" id="details-event-desc-short"></p>
+          <p class="editorial-p" id="details-event-desc-full"></p>
+          
+          <!-- Schedule Section -->
+          <div style="margin-top: 50px;">
+            <h3 class="playfair" style="font-size: 1.6rem; color: var(--primary-forest); margin-bottom: 25px;">Event Schedule</h3>
+            <div class="schedule-timeline" id="details-schedule">
+              <!-- Dynamically Hydrated -->
+            </div>
+          </div>
+          
+          <!-- Speakers Section -->
+          <div style="margin-top: 50px;" id="details-speakers-section">
+            <h3 class="playfair" style="font-size: 1.6rem; color: var(--primary-forest); margin-bottom: 25px;">Host & Speakers</h3>
+            <div class="speakers-list" id="details-speakers">
+              <!-- Dynamically Hydrated -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar Right -->
+        <div class="editorial-stats-col reveal-right">
+          
+          <!-- Countdown Timer Widget -->
+          <div class="details-sidebar-box" id="details-countdown-box">
+            <h3>Time Remaining</h3>
+            <div class="countdown-timer-row">
+              <div class="countdown-digit-box">
+                <span class="countdown-num" id="cd-days">00</span>
+                <span class="countdown-label">Days</span>
+              </div>
+              <div class="countdown-digit-box">
+                <span class="countdown-num" id="cd-hours">00</span>
+                <span class="countdown-label">Hours</span>
+              </div>
+              <div class="countdown-digit-box">
+                <span class="countdown-num" id="cd-minutes">00</span>
+                <span class="countdown-label">Mins</span>
+              </div>
+              <div class="countdown-digit-box">
+                <span class="countdown-num" id="cd-seconds">00</span>
+                <span class="countdown-label">Secs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event Information Box -->
+          <div class="details-sidebar-box">
+            <h3>Event Information</h3>
+            <div class="event-meta-grid" style="border: none; padding: 0;">
+              <div class="event-meta-item">
+                <i class="fa-regular fa-calendar-days"></i>
+                <div>
+                  <span class="event-meta-val" id="details-info-date">Loading...</span>
+                </div>
+              </div>
+              <div class="event-meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <div>
+                  <span class="event-meta-val" id="details-info-time">Loading...</span>
+                </div>
+              </div>
+              <div class="event-meta-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <span class="event-meta-val" id="details-info-location">Loading...</span>
+                </div>
+              </div>
+              <div class="event-meta-item">
+                <i class="fa-regular fa-user"></i>
+                <div>
+                  <span class="event-meta-val" id="details-info-organiser">Loading...</span>
+                </div>
+              </div>
+              <div class="event-meta-item">
+                <i class="fa-solid fa-chair"></i>
+                <div>
+                  <span class="event-meta-val" id="details-info-seats">Loading...</span>
+                </div>
+              </div>
+            </div>
+            
+            <button class="btn-event-register ripple hover-target" id="details-action-btn" style="width: 100%; margin-top: 25px; display: block; border-radius: 6px;">
+              Register Now
+            </button>
+          </div>
+
+          <!-- Calendar Integration Widget -->
+          <div class="details-sidebar-box" id="details-calendar-box">
+            <h3>Add to Calendar</h3>
+            <div class="calendar-integration-box">
+              <a href="#" target="_blank" class="btn-calendar btn-google hover-target" id="calendar-google-btn">
+                <i class="fa-brands fa-google"></i>
+                <span>Google Calendar</span>
+              </a>
+              <button class="btn-calendar btn-ics hover-target" id="calendar-ics-btn">
+                <i class="fa-regular fa-calendar-plus"></i>
+                <span>Download .ICS File</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Social Sharing Widget -->
+          <div class="details-sidebar-box">
+            <h3>Share Event</h3>
+            <div class="social-share-strip">
+              <button class="btn-share-social hover-target" id="share-wa" aria-label="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+              <button class="btn-share-social hover-target" id="share-fb" aria-label="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></button>
+              <button class="btn-share-social hover-target" id="share-x" aria-label="Share on X"><i class="fa-brands fa-x-twitter"></i></button>
+              <button class="btn-share-social hover-target" id="share-copy" aria-label="Copy Link"><i class="fa-regular fa-copy"></i></button>
+            </div>
+          </div>
+
+          <!-- Map Placeholder Box -->
+          <div class="details-sidebar-box" style="padding: 0; overflow: hidden; border-radius: 16px;">
+            <div style="background: rgba(18, 53, 36, 0.08); padding: 25px; text-align: center; border-bottom: 1px solid rgba(198, 161, 91, 0.15);">
+              <i class="fa-solid fa-map-pin" style="color: var(--accent-gold); font-size: 1.5rem; margin-bottom: 8px;"></i>
+              <p class="font-inter" style="font-size: 0.8rem; font-weight: 600; color: var(--primary-forest);">Gaya-Bodhgaya Road, Bihar</p>
+            </div>
+            <!-- Google Maps Static/IFrame Embed Placeholder -->
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14457.771966144883!2d84.98188167812906!3d24.694856037803373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32c1b2b8004f1%3A0xe54cb8e68cf90a18!2sBodh%20Gaya%2C%20Bihar!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+              width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== RELATED EVENTS SECTION ==================== -->
+  <section class="events-section" id="related-events-section" style="border-top: 1px solid rgba(198, 161, 91, 0.15);">
+    <div class="section-container">
+      <div class="gallery-header reveal-up">
+        <span class="section-subtitle center">EXPLORE MORE</span>
+        <h2 class="section-title center">Related Events</h2>
+      </div>
+
+      <div class="events-grid reveal-up" id="related-events-grid">
+        <!-- Hydrated dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== REGISTRATION MODAL FORM ==================== -->
+  <div class="event-modal" id="register-modal" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close modal">&times;</button>
+      
+      <!-- Form Interface -->
+      <div id="modal-form-interface">
+        <h3 class="modal-title playfair">Register for Event</h3>
+        <p class="modal-subtitle font-inter" id="modal-event-name">Event Name Here</p>
+        
+        <form id="event-reg-form" novalidate>
+          <div class="modal-form-grid">
+            <div class="form-group">
+              <label for="reg-name">Full Name *</label>
+              <input type="text" id="reg-name" class="form-input" placeholder="Your name" required>
+              <span class="form-error-msg" id="err-name">Full Name is required.</span>
+            </div>
+            
+            <div class="form-group">
+              <label for="reg-email">Email Address *</label>
+              <input type="email" id="reg-email" class="form-input" placeholder="Your email" required>
+              <span class="form-error-msg" id="err-email">A valid email is required.</span>
+            </div>
+            
+            <div class="form-group">
+              <label for="reg-mobile">Mobile Number *</label>
+              <input type="tel" id="reg-mobile" class="form-input" placeholder="10-digit mobile" required>
+              <span class="form-error-msg" id="err-mobile">10-digit mobile number is required.</span>
+            </div>
+            
+            <div class="form-group">
+              <label for="reg-city">City *</label>
+              <input type="text" id="reg-city" class="form-input" placeholder="Your city" required>
+              <span class="form-error-msg" id="err-city">City is required.</span>
+            </div>
+            
+            <div class="form-group full-width">
+              <label for="reg-participants">Number of Participants *</label>
+              <input type="number" id="reg-participants" class="form-input" min="1" max="10" value="1" required>
+              <span class="form-error-msg" id="err-participants">Please enter a valid count (1 - 10).</span>
+            </div>
+            
+            <div class="form-group full-width">
+              <label for="reg-message">Additional Message</label>
+              <textarea id="reg-message" class="form-input" rows="3" placeholder="Dietary requests or comments..."></textarea>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn-form-submit ripple hover-target">Confirm Registration</button>
+        </form>
+      </div>
+
+      <!-- Success Interface -->
+      <div id="modal-success-interface" class="modal-success-screen">
+        <div class="success-icon-box">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h3 class="playfair" style="font-size: 1.8rem; color: var(--primary-forest); margin-bottom: 10px;">Registration Successful!</h3>
+        <p class="font-inter" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 25px;">Thank you for registering. A confirmation ticket has been sent to your email address.</p>
+        <button class="btn-event-register ripple hover-target" id="success-close-btn" style="max-width: 200px; margin: 0 auto;">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="main-footer" id="contact">
+    <div class="section-container">
+      <div class="footer-grid">
+        <div class="footer-col brand-col">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="Bal Jyoti Logo" class="footer-logo-img">
+            <span class="logo-text">BAL JYOTI<br><span class="logo-subtext">FOUNDATION</span></span>
+          </div>
+          <p class="footer-desc">Empowering rural communities through heritage preservation, education, and sustainable livelihoods.</p>
+        </div>
+
+        <div class="footer-col links-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="hover-target">Home</a></li>
+            <li><a href="about.html" class="hover-target">About Us</a></li>
+            <li><a href="index.html#programs" class="hover-target">Programs</a></li>
+            <li><a href="index.html#impact" class="hover-target">Impact</a></li>
+            <li><a href="index.html#gallery" class="hover-target">Gallery</a></li>
+            <li><a href="index.html#events" class="hover-target">Events</a></li>
+            <li><a href="index.html#donation" class="hover-target">Volunteer</a></li>
+            <li><a href="index.html#contact" class="hover-target">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col contact-col">
+          <h3>Get In Touch</h3>
+          <p class="contact-info-item"><i class="fa-solid fa-map-location-dot"></i><span>Bodhgaya, Bihar, India</span></p>
+          <p class="contact-info-item"><i class="fa-solid fa-envelope"></i><a href="mailto:info@baljyotifoundation.org" class="hover-target">info@baljyotifoundation.org</a></p>
+          <p class="contact-info-item"><i class="fa-solid fa-phone"></i><span>+91 12345 67890</span></p>
+        </div>
+
+        <div class="footer-col newsletter-col">
+          <h3>Newsletter</h3>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+            <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Bal Jyoti Foundation. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== BACK TO TOP BUTTON ==================== -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- CORE LIBRARIES -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <!-- Load Global Events Array -->
+  <script src="events-data.js"></script>
+  
+  <!-- Shared JS Code -->
+  <script src="script.js"></script>
+  
+  <!-- Local Template Hydration Logic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Read Query Parameter ID
+      const params = new URLSearchParams(window.location.search);
+      const eventId = parseInt(params.get("id")) || 1;
+      
+      const event = window.BAL_JYOTI_EVENTS.find(e => e.id === eventId) || window.BAL_JYOTI_EVENTS[0];
+      
+      // 2. Hydrate details
+      document.title = `${event.title} | Bal Jyoti Foundation`;
+      document.getElementById("details-event-category").innerText = event.category;
+      document.getElementById("details-event-title").innerText = event.title;
+      document.getElementById("details-event-subtitle").innerText = event.description;
+      document.getElementById("details-breadcrumbs").innerText = `Home > Events > ${event.title}`;
+      document.getElementById("details-hero-bg").style.backgroundImage = `linear-gradient(to bottom, rgba(27,27,27,0.45), rgba(27,27,27,0.8)), url('${event.image}')`;
+      document.getElementById("details-main-img").src = event.image;
+      document.getElementById("details-main-img").alt = event.title;
+      document.getElementById("details-event-desc-short").innerText = event.description;
+      document.getElementById("details-event-desc-full").innerText = event.fullDescription;
+      
+      document.getElementById("details-info-date").innerText = formatDate(event.date);
+      document.getElementById("details-info-time").innerText = `${formatTime(event.startTime)} - ${formatTime(event.endTime)}`;
+      document.getElementById("details-info-location").innerText = event.location;
+      document.getElementById("details-info-organiser").innerText = event.organiser;
+      
+      if (event.status === "Completed") {
+        document.getElementById("details-info-seats").innerText = "Completed";
+        const actBtn = document.getElementById("details-action-btn");
+        actBtn.innerText = "Completed";
+        actBtn.classList.add("btn-completed");
+        document.getElementById("details-countdown-box").style.display = "none";
+        document.getElementById("details-calendar-box").style.display = "none";
+      } else {
+        document.getElementById("details-info-seats").innerText = `${event.seatsRemaining} of ${event.seatsTotal} Seats Left`;
+        startCountdown(event.date, event.startTime);
+        setupCalendarLinks(event);
+      }
+      
+      // 3. Hydrate Schedule
+      const scheduleContainer = document.getElementById("details-schedule");
+      scheduleContainer.innerHTML = "";
+      event.schedule.forEach(node => {
+        scheduleContainer.innerHTML += `
+          <div class="schedule-node">
+            <span class="schedule-time">${node.time}</span>
+            <span class="schedule-activity">${node.activity}</span>
+          </div>
+        `;
+      });
+      
+      // 4. Hydrate Speakers
+      const speakersContainer = document.getElementById("details-speakers");
+      if (event.speakers && event.speakers.length > 0) {
+        speakersContainer.innerHTML = "";
+        event.speakers.forEach(speaker => {
+          speakersContainer.innerHTML += `
+            <div class="speaker-item">
+              <div class="speaker-avatar"><i class="fa-solid fa-user-tie"></i></div>
+              <span class="speaker-name">${speaker}</span>
+            </div>
+          `;
+        });
+      } else {
+        document.getElementById("details-speakers-section").style.display = "none";
+      }
+      
+      // 5. Hydrate Related Events
+      const relatedGrid = document.getElementById("related-events-grid");
+      relatedGrid.innerHTML = "";
+      const siblings = window.BAL_JYOTI_EVENTS.filter(e => e.id !== event.id).slice(0, 3);
+      siblings.forEach(sibling => {
+        const dateStr = formatDate(sibling.date);
+        const timeStr = `${formatTime(sibling.startTime)} - ${formatTime(sibling.endTime)}`;
+        const seatStr = sibling.status === "Completed" ? "Completed" : `${sibling.seatsRemaining} Left`;
+        const completedClass = sibling.status === "Completed" ? "completed" : "";
+        const buttonClass = sibling.status === "Completed" ? "btn-completed" : "";
+        const buttonText = sibling.status === "Completed" ? "Completed" : "Register Now";
+        
+        relatedGrid.innerHTML += `
+          <div class="event-card reveal-up">
+            <div class="event-img-wrapper">
+              <span class="event-badge">${sibling.category}</span>
+              <span class="event-status-badge ${completedClass}">${sibling.status}</span>
+              <img src="${sibling.image}" alt="${sibling.title}" class="event-img" loading="lazy">
+            </div>
+            <div class="event-card-content">
+              <h3 class="event-card-title">${sibling.title}</h3>
+              <p class="event-card-desc">${sibling.description}</p>
+              <div class="event-meta-grid">
+                <div class="event-meta-item"><i class="fa-regular fa-calendar-days"></i><span>${dateStr}</span></div>
+                <div class="event-meta-item"><i class="fa-regular fa-clock"></i><span>${timeStr}</span></div>
+                <div class="event-meta-item"><i class="fa-solid fa-location-dot"></i><span>${sibling.location}</span></div>
+                <div class="event-meta-item"><i class="fa-solid fa-chair"></i><span>Seats: <strong class="event-meta-val">${seatStr}</strong></span></div>
+              </div>
+              <div class="event-card-actions">
+                <a href="event-details.html?id=${sibling.id}" class="btn-event-register ripple hover-target ${buttonClass}">${buttonText}</a>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+      
+      // 6. Setup Modal Form Trigger
+      const registerModal = document.getElementById("register-modal");
+      const openModalBtn = document.getElementById("details-action-btn");
+      const closeModalBtn = document.getElementById("modal-close");
+      const modalBackdrop = document.getElementById("modal-backdrop");
+      const formInterface = document.getElementById("modal-form-interface");
+      const successInterface = document.getElementById("modal-success-interface");
+      
+      if (openModalBtn && event.status !== "Completed") {
+        openModalBtn.addEventListener("click", () => {
+          document.getElementById("modal-event-name").innerText = event.title;
+          registerModal.classList.add("visible");
+          registerModal.setAttribute("aria-hidden", "false");
+          formInterface.style.display = "block";
+          successInterface.style.display = "none";
+        });
+      }
+      
+      const hideModal = () => {
+        registerModal.classList.remove("visible");
+        registerModal.setAttribute("aria-hidden", "true");
+      };
+      
+      if (closeModalBtn) closeModalBtn.addEventListener("click", hideModal);
+      if (modalBackdrop) modalBackdrop.addEventListener("click", hideModal);
+      if (document.getElementById("success-close-btn")) {
+        document.getElementById("success-close-btn").addEventListener("click", hideModal);
+      }
+      
+      // 7. Form validation & submit
+      const form = document.getElementById("event-reg-form");
+      if (form) {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          let isValid = true;
+          
+          // Elements
+          const nameInput = document.getElementById("reg-name");
+          const emailInput = document.getElementById("reg-email");
+          const mobileInput = document.getElementById("reg-mobile");
+          const cityInput = document.getElementById("reg-city");
+          const participantsInput = document.getElementById("reg-participants");
+          
+          // Reset errors
+          document.querySelectorAll(".form-error-msg").forEach(el => el.style.display = "none");
+          
+          if (!nameInput.value.trim()) {
+            document.getElementById("err-name").style.display = "block";
+            isValid = false;
+          }
+          
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(emailInput.value.trim())) {
+            document.getElementById("err-email").style.display = "block";
+            isValid = false;
+          }
+          
+          const phoneRegex = /^\d{10}$/;
+          if (!phoneRegex.test(mobileInput.value.trim())) {
+            document.getElementById("err-mobile").style.display = "block";
+            isValid = false;
+          }
+          
+          if (!cityInput.value.trim()) {
+            document.getElementById("err-city").style.display = "block";
+            isValid = false;
+          }
+          
+          const pVal = parseInt(participantsInput.value);
+          if (isNaN(pVal) || pVal < 1 || pVal > 10) {
+            document.getElementById("err-participants").style.display = "block";
+            isValid = false;
+          }
+          
+          if (isValid) {
+            // Success animation
+            formInterface.style.display = "none";
+            successInterface.style.display = "block";
+            form.reset();
+          }
+        });
+      }
+      
+      // 8. Social Share handlers
+      const shareUrl = encodeURIComponent(window.location.href);
+      const shareTitle = encodeURIComponent(`Join us at the event: ${event.title}`);
+      
+      document.getElementById("share-wa").addEventListener("click", () => {
+        window.open(`https://api.whatsapp.com/send?text=${shareTitle}%20${shareUrl}`, "_blank");
+      });
+      document.getElementById("share-fb").addEventListener("click", () => {
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank");
+      });
+      document.getElementById("share-x").addEventListener("click", () => {
+        window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareTitle}`, "_blank");
+      });
+      document.getElementById("share-copy").addEventListener("click", () => {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          alert("Event link copied to clipboard!");
+        });
+      });
+      
+      // Helper: Format Date
+      function formatDate(dateString) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(dateString).toLocaleDateString('en-US', options);
+      }
+      
+      // Helper: Format Time
+      function formatTime(timeString) {
+        const [hour, min] = timeString.split(':');
+        const H = parseInt(hour);
+        const ampm = H >= 12 ? 'PM' : 'AM';
+        const h = H % 12 || 12;
+        return `${h}:${min} ${ampm}`;
+      }
+      
+      // Helper: Live Countdown
+      function startCountdown(dateStr, timeStr) {
+        const targetDate = new Date(`${dateStr}T${timeStr}:00`).getTime();
+        
+        const updateTimer = () => {
+          const now = new Date().getTime();
+          const distance = targetDate - now;
+          
+          const daysEl = document.getElementById("cd-days");
+          const hoursEl = document.getElementById("cd-hours");
+          const minutesEl = document.getElementById("cd-minutes");
+          const secondsEl = document.getElementById("cd-seconds");
+
+          if (distance < 0) {
+            if (daysEl) daysEl.textContent = "00";
+            if (hoursEl) hoursEl.textContent = "00";
+            if (minutesEl) minutesEl.textContent = "00";
+            if (secondsEl) secondsEl.textContent = "00";
+            if (typeof timerInterval !== 'undefined') clearInterval(timerInterval);
+            return;
+          }
+          
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+          if (daysEl) daysEl.textContent = days.toString().padStart(2, '0');
+          if (hoursEl) hoursEl.textContent = hours.toString().padStart(2, '0');
+          if (minutesEl) minutesEl.textContent = minutes.toString().padStart(2, '0');
+          if (secondsEl) secondsEl.textContent = seconds.toString().padStart(2, '0');
+        };
+        
+        updateTimer();
+        const timerInterval = setInterval(updateTimer, 1000);
+      }
+      
+      // Helper: Calendar setup
+      function setupCalendarLinks(ev) {
+        const startStr = ev.date.replace(/-/g, '') + 'T' + ev.startTime.replace(':', '') + '00';
+        const endStr = ev.date.replace(/-/g, '') + 'T' + ev.endTime.replace(':', '') + '00';
+        
+        // Google Calendar
+        const gCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(ev.title)}&dates=${startStr}/${endStr}&details=${encodeURIComponent(ev.description)}&location=${encodeURIComponent(ev.location)}`;
+        const gCalBtn = document.getElementById("calendar-google-btn");
+        if (gCalBtn) gCalBtn.href = gCalUrl;
+        
+        const icsBtn = document.getElementById("calendar-ics-btn");
+        if (icsBtn) {
+          icsBtn.addEventListener("click", () => {
+          const icsContent = [
+            "BEGIN:VCALENDAR",
+            "VERSION:2.0",
+            "PRODID:-//Bal Jyoti Foundation//Events//EN",
+            "BEGIN:VEVENT",
+            `UID:event-${ev.id}@baljyoti.org`,
+            `DTSTAMP:${ev.date.replace(/-/g, '')}T000000Z`,
+            `DTSTART:${startStr}`,
+            `DTEND:${endStr}`,
+            `SUMMARY:${ev.title}`,
+            `DESCRIPTION:${ev.description}`,
+            `LOCATION:${ev.location}`,
+            "END:VEVENT",
+            "END:VCALENDAR"
+          ].join("\r\n");
+          
+          const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8;" });
+          const link = document.createElement("a");
+          link.href = URL.createObjectURL(blob);
+          link.setAttribute("download", `${ev.title.toLowerCase().replace(/\s+/g, '-')}.ics`);
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        });
+      }
+      
+      // Inject Schema.org LD-JSON dynamic script
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": event.title,
+        "startDate": `${event.date}T${event.startTime}:00`,
+        "endDate": `${event.date}T${event.endTime}:00`,
+        "eventStatus": event.status === "Completed" ? "https://schema.org/EventCancelled" : "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": event.location.split(',')[0],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bodhgaya",
+            "addressRegion": "Bihar",
+            "addressCountry": "IN"
+          }
+        },
+        "image": [
+          `https://baljyoti.org/${event.image}`
+        ],
+        "description": event.description,
+        "organizer": {
+          "@type": "Organization",
+          "name": "Bal Jyoti Foundation",
+          "url": "https://baljyoti.org"
+        }
+      };
+      
+      const scriptNode = document.createElement("script");
+      scriptNode.type = "application/ld+json";
+      scriptNode.text = JSON.stringify(schema);
+      document.head.appendChild(scriptNode);
+    });
+  </script>
+</body>
+</html>

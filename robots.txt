@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block admin/system paths (none exist currently, but proactive)
+Disallow: /private/
+Disallow: /.git/
+
+# Sitemap location
+Sitemap: https://baljyoti.org/sitemap.xml
