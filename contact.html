@@ -441,6 +441,18 @@
       line-height: 1.6;
     }
 
+    .cnt-error-banner {
+      display: none;
+      background: rgba(220, 53, 69, 0.08);
+      border: 1px solid #dc3545;
+      border-radius: 14px;
+      padding: 20px;
+      margin-top: 22px;
+      color: #842029;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
     /* ── 5. GOOGLE MAP SECTION ── */
     .cnt-map-section {
       background: #ffffff;
@@ -842,9 +854,17 @@
           <!-- 4. SUCCESS NOTICE -->
           <div class="cnt-success-banner" id="contactSuccessNotice">
             <h4 style="font-family: var(--font-serif); font-size: 1.1rem; margin-bottom: 6px; color: var(--color-forest);">
-              <i class="fa-solid fa-circle-check" style="color: var(--color-gold);"></i> Message Received!
+              <i class="fa-solid fa-circle-check" style="color: var(--color-gold);"></i> Message Sent Successfully!
             </h4>
-            <p>Thank you for contacting Bal Jyoti Foundation. Your message has been received. Our team will get back to you soon.</p>
+            <p>Thank you for contacting Bal Jyoti Foundation. Your message has been sent successfully! Our team will get back to you soon.</p>
+          </div>
+
+          <!-- 4b. ERROR NOTICE -->
+          <div class="cnt-error-banner" id="contactErrorNotice">
+            <h4 style="font-family: var(--font-serif); font-size: 1.1rem; margin-bottom: 6px; color: #842029;">
+              <i class="fa-solid fa-circle-exclamation" style="color: #dc3545;"></i> Unable to Send Message
+            </h4>
+            <p id="contactErrorMessage">An error occurred while sending your message. Please try again later or check your EmailJS configuration.</p>
           </div>
         </div>
 
@@ -999,6 +1019,9 @@
     </div>
   </footer>
 
+  <!-- EmailJS SDK CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
   <!-- SCRIPTS -->
   <script src="script.js"></script>
   <script src="cms-render.js"></script>
@@ -1020,14 +1043,32 @@
       document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
     });
 
-    // 4. FORM FUNCTIONALITY & VALIDATION
+    // ==========================================
+    // EMAILJS CONFIGURATION & FORM HANDLER
+    // ==========================================
+    const EMAILJS_PUBLIC_KEY = "M4VFhO2uk-u--Eqh0";
+    const EMAILJS_SERVICE_ID = "service_m786a0d";
+    const EMAILJS_TEMPLATE_ID = "template_1towgb5";
+
+    // Initialize EmailJS SDK
+    if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY) {
+      emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    }
+
+    // FORM FUNCTIONALITY, VALIDATION & EMAILJS SUBMISSION
     const contactForm = document.getElementById('contactPageForm');
     if (contactForm) {
       contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
 
-        // Reset error messages
+        // Reset error messages and banners
         document.querySelectorAll('.cnt-error-msg').forEach(el => el.style.display = 'none');
+        const successNotice = document.getElementById('contactSuccessNotice');
+        const errorNotice = document.getElementById('contactErrorNotice');
+        const errorMsgEl = document.getElementById('contactErrorMessage');
+        
+        if (successNotice) successNotice.style.display = 'none';
+        if (errorNotice) errorNotice.style.display = 'none';
 
         const fullname = document.getElementById('cnt-fullname').value.trim();
         const email = document.getElementById('cnt-email').value.trim();
@@ -1037,46 +1078,86 @@
 
         let isValid = true;
 
+        // Validation 1: Full Name
         if (!fullname) {
           document.getElementById('err-fullname').style.display = 'block';
           isValid = false;
         }
 
+        // Validation 2: Email Address
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email || !emailRegex.test(email)) {
           document.getElementById('err-email').style.display = 'block';
           isValid = false;
         }
 
+        // Validation 3: Subject Selection
         if (!subject) {
           document.getElementById('err-subject').style.display = 'block';
           isValid = false;
         }
 
+        // Validation 4: Message Text
         if (!message) {
           document.getElementById('err-message').style.display = 'block';
           isValid = false;
         }
 
-        if (!isValid) return;
-
-        try {
-          await fetch('/api/v1/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name: fullname, email, phone, subject, message })
-          });
-        } catch (err) {}
-
-        // Show Success Notice
-        const successNotice = document.getElementById('contactSuccessNotice');
-        if (successNotice) {
-          successNotice.style.display = 'block';
-          successNotice.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Validation 5: Optional Phone Number
+        if (phone && !/^[+\d\s()-]{7,20}$/.test(phone)) {
+          document.getElementById('err-phone').style.display = 'block';
+          isValid = false;
         }
 
-        // Clear Form
-        contactForm.reset();
+        if (!isValid) return;
+
+        // Show loading state on submit button
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnContent = submitBtn ? submitBtn.innerHTML : '';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+        }
+
+        try {
+          // Check if EmailJS SDK is loaded
+          if (typeof emailjs === 'undefined') {
+            throw new Error('EmailJS SDK is not loaded. Please ensure the browser script is included.');
+          }
+
+          // Check if credentials are set
+          if (!EMAILJS_PUBLIC_KEY || !EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID) {
+            throw new Error('EmailJS configuration credentials are missing.');
+          }
+
+          // Send form using EmailJS sendForm()
+          await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm, EMAILJS_PUBLIC_KEY);
+
+          // Show Success Notice ("Message sent successfully!")
+          if (successNotice) {
+            successNotice.style.display = 'block';
+            successNotice.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+
+          // Clear Form after successful submission
+          contactForm.reset();
+
+        } catch (err) {
+          console.error('EmailJS Submission Error:', err);
+          if (errorMsgEl) {
+            errorMsgEl.textContent = err.text || err.message || 'Failed to send email. Please try again later.';
+          }
+          if (errorNotice) {
+            errorNotice.style.display = 'block';
+            errorNotice.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        } finally {
+          // Restore submit button state
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnContent;
+          }
+        }
       });
     }
   </script>
